@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TCS / QT Coding Checklist (50) + C++ Answers</title>
+  <style>
+    :root { --bg:#0b1220; --card:#111a2e; --text:#e8eefc; --muted:#a9b4d0; --border:#223055; --accent:#6ee7ff; }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: linear-gradient(180deg, #070b14 0%, #0b1220 40%, #070b14 100%);
+      color:var(--text);
+    }
+    header{
+      padding:22px 16px; position:sticky; top:0; backdrop-filter: blur(10px);
+      background: rgba(7,11,20,.75); border-bottom:1px solid rgba(34,48,85,.6);
+      z-index:10;
+    }
+    .wrap{max-width:1100px; margin:0 auto;}
+    h1{margin:0 0 8px; font-size:20px; letter-spacing:.3px;}
+    .sub{color:var(--muted); font-size:13px; line-height:1.4;}
+    .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:14px;}
+    input[type="text"]{
+      flex:1; min-width:240px; padding:10px 12px; border-radius:12px;
+      border:1px solid rgba(34,48,85,.9); background: rgba(17,26,46,.7);
+      color:var(--text); outline:none;
+    }
+    button{
+      padding:10px 12px; border-radius:12px; border:1px solid rgba(34,48,85,.9);
+      background: rgba(17,26,46,.85); color:var(--text); cursor:pointer;
+    }
+    button:hover{border-color: rgba(110,231,255,.7)}
+    main{padding:18px 16px 40px;}
+    .stats{
+      display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin:14px 0 10px;
+      color:var(--muted); font-size:13px;
+    }
+    .pill{
+      padding:6px 10px; border:1px solid rgba(34,48,85,.9); border-radius:999px;
+      background: rgba(17,26,46,.7);
+    }
+    .grid{display:grid; grid-template-columns:1fr; gap:10px;}
+    @media(min-width:900px){ .grid{grid-template-columns:1fr 1fr;} }
+    .card{
+      background: rgba(17,26,46,.7);
+      border:1px solid rgba(34,48,85,.9);
+      border-radius:16px;
+      padding:12px;
+    }
+    .topline{
+      display:flex; gap:10px; align-items:flex-start;
+    }
+    .qtitle{font-weight:600; line-height:1.35;}
+    .qmeta{color:var(--muted); font-size:12px; margin-top:4px;}
+    details{
+      margin-top:10px;
+      border-top:1px dashed rgba(34,48,85,.9);
+      padding-top:10px;
+    }
+    summary{cursor:pointer; color:var(--accent); user-select:none;}
+    pre{
+      margin:10px 0 0; padding:12px; border-radius:14px;
+      background: rgba(7,11,20,.8);
+      border:1px solid rgba(34,48,85,.8);
+      overflow:auto;
+      font-size:12.5px; line-height:1.45;
+    }
+    .actions{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;}
+    .small{font-size:12px; color:var(--muted);}
+    .right{margin-left:auto}
+    .copied{color:#86efac}
+    a{color:var(--accent)}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>TCS / QT Coding Checklist (50) — Click to reveal C++ answer</h1>
+    <div class="sub">
+      ✅ Tick what you’ve finished. Use search. Your progress saves in this browser (localStorage).
+      <span class="small">Tip: For exam practice, copy a solution and rewrite without looking.</span>
+    </div>
+    <div class="row">
+      <input id="search" type="text" placeholder="Search questions… (e.g., palindrome, gcd, rotate)" />
+      <button id="markAll">Mark all</button>
+      <button id="unmarkAll">Unmark all</button>
+      <button id="reset">Reset progress</button>
+    </div>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="grid" id="list"></div>
+    <p class="small" style="margin-top:16px;">
+      Note: Input/output formats vary across TCS sets. Each solution includes a clean, typical format with comments so you can adapt fast.
+    </p>
+  </div>
+</main>
+
+<script>
+/**
+ * 50 questions + C++ answers (concise, exam-ready templates)
+ * Save progress using localStorage key: tcs_qt_checklist_v1
+ */
+
+const questions = [
+  // NUMBER-BASED (1-10)
+  {
+    id: 1, title: "Reverse a number",
+    tags: ["number","math"],
+    cpp:
+`// Input: n
+// Output: reverse of n
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  long long n; if(!(cin>>n)) return 0;
+  long long x = llabs(n), rev = 0;
+  while(x){ rev = rev*10 + (x%10); x/=10; }
+  if(n<0) rev = -rev;
+  cout << rev;
+  return 0;
+}`
+  },
+  {
+    id: 2, title: "Check whether a number is a palindrome",
+    tags: ["number","math"],
+    cpp:
+`// Input: n
+// Output: Palindrome / Not Palindrome
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  long long n; cin>>n;
+  long long x = llabs(n), t=x, rev=0;
+  while(t){ rev = rev*10 + (t%10); t/=10; }
+  cout << (rev==x ? "Palindrome" : "Not Palindrome");
+  return 0;
+}`
+  },
+  {
+    id: 3, title: "Check whether a number is an Armstrong number",
+    tags: ["number","math"],
+    cpp:
+`// Input: n
+// Output: Armstrong / Not Armstrong
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  long long n; cin>>n;
+  long long x = llabs(n), t=x;
+  int k = (x==0?1: (int)to_string(x).size());
+  long long sum=0;
+  while(t){
+    int d = t%10;
+    sum += (long long)round(pow(d, k));
+    t/=10;
+  }
+  if(x==0) sum = 0;
+  cout << (sum==x ? "Armstrong" : "Not Armstrong");
+  return 0;
+}`
+  },
+  {
+    id: 4, title: "Check whether a number is prime",
+    tags: ["number","prime"],
+    cpp:
+`// Input: n
+// Output: Prime / Not Prime
+#include <bits/stdc++.h>
+using namespace std;
+bool isPrime(long long n){
+  if(n<2) return false;
+  if(n%2==0) return n==2;
+  for(long long i=3;i*i<=n;i+=2) if(n%i==0) return false;
+  return true;
+}
+int main(){
+  long long n; cin>>n;
+  cout << (isPrime(n) ? "Prime" : "Not Prime");
+  return 0;
+}`
+  },
+  {
+    id: 5, title: "Print all prime numbers between two numbers",
+    tags: ["number","prime"],
+    cpp:
+`// Input: a b (inclusive)
+// Output: primes space-separated
+#include <bits/stdc++.h>
+using namespace std;
+bool isPrime(long long n){
+  if(n<2) return false;
+  if(n%2==0) return n==2;
+  for(long long i=3;i*i<=n;i+=2) if(n%i==0) return false;
+  return true;
+}
+int main(){
+  long long a,b; cin>>a>>b;
+  if(a>b) swap(a,b);
+  bool first=true;
+  for(long long x=a;x<=b;x++){
+    if(isPrime(x)){
+      if(!first) cout<<" ";
+      cout<<x; first=false;
+    }
+  }
+  return 0;
+}`
+  },
+  {
+    id: 6, title: "Find factorial of a number",
+    tags: ["number","math"],
+    cpp:
+`// Input: n
+// Output: n! (for large n, use big integer; here typical constraints)
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  long long n; cin>>n;
+  if(n<0){ cout<<"Invalid"; return 0; }
+  unsigned long long f=1;
+  for(long long i=2;i<=n;i++) f*=i;
+  cout<<f;
+  return 0;
+}`
+  },
+  {
+    id: 7, title: "Find Fibonacci series up to N terms",
+    tags: ["number","series"],
+    cpp:
+`// Input: n (terms)
+// Output: n Fibonacci numbers
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n; cin>>n;
+  long long a=0,b=1;
+  for(int i=1;i<=n;i++){
+    if(i==1) cout<<a;
+    else if(i==2) cout<<" "<<b;
+    else{
+      long long c=a+b; a=b; b=c;
+      cout<<" "<<b;
+    }
+  }
+  return 0;
+}`
+  },
+  {
+    id: 8, title: "Find sum of digits of a number",
+    tags: ["number","math"],
+    cpp:
+`// Input: n
+// Output: sum of digits
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  long long n; cin>>n;
+  long long x = llabs(n), sum=0;
+  while(x){ sum += x%10; x/=10; }
+  cout<<sum;
+  return 0;
+}`
+  },
+  {
+    id: 9, title: "Find product of digits of a number",
+    tags: ["number","math"],
+    cpp:
+`// Input: n
+// Output: product of digits (0 -> 0)
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  long long n; cin>>n;
+  long long x = llabs(n);
+  if(x==0){ cout<<0; return 0; }
+  long long prod=1;
+  while(x){ prod *= (x%10); x/=10; }
+  cout<<prod;
+  return 0;
+}`
+  },
+  {
+    id: 10, title: "Count number of digits in a number",
+    tags: ["number","math"],
+    cpp:
+`// Input: n
+// Output: digits count
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  long long n; cin>>n;
+  long long x = llabs(n);
+  if(x==0){ cout<<1; return 0; }
+  int cnt=0;
+  while(x){ cnt++; x/=10; }
+  cout<<cnt;
+  return 0;
+}`
+  },
+
+  // ARRAY-BASED (11-20)
+  {
+    id: 11, title: "Find largest element in an array",
+    tags: ["array"],
+    cpp:
+`// Input: n then n integers
+// Output: maximum
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n; cin>>n;
+  long long mx = LLONG_MIN, x;
+  for(int i=0;i<n;i++){ cin>>x; mx=max(mx,x); }
+  cout<<mx;
+  return 0;
+}`
+  },
+  {
+    id: 12, title: "Find smallest element in an array",
+    tags: ["array"],
+    cpp:
+`// Input: n then n integers
+// Output: minimum
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n; cin>>n;
+  long long mn = LLONG_MAX, x;
+  for(int i=0;i<n;i++){ cin>>x; mn=min(mn,x); }
+  cout<<mn;
+  return 0;
+}`
+  },
+  {
+    id: 13, title: "Find second largest element in an array",
+    tags: ["array"],
+    cpp:
+`// Input: n then n integers
+// Output: second largest (assumes n>=2)
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n; cin>>n;
+  long long x, first=LLONG_MIN, second=LLONG_MIN;
+  for(int i=0;i<n;i++){
+    cin>>x;
+    if(x>first){ second=first; first=x; }
+    else if(x!=first && x>second){ second=x; }
+  }
+  if(second==LLONG_MIN) cout<<"Not Found";
+  else cout<<second;
+  return 0;
+}`
+  },
+  {
+    id: 14, title: "Reverse an array",
+    tags: ["array"],
+    cpp:
+`// Input: n then n integers
+// Output: reversed array
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n; cin>>n;
+  vector<long long>a(n);
+  for(int i=0;i<n;i++) cin>>a[i];
+  reverse(a.begin(), a.end());
+  for(int i=0;i<n;i++){
+    if(i) cout<<" ";
+    cout<<a[i];
+  }
+  return 0;
+}`
+  },
+  {
+    id: 15, title: "Sort an array in ascending order",
+    tags: ["array","sort"],
+    cpp:
+`// Input: n then n integers
+// Output: sorted asc
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n; cin>>n;
+  vector<long long>a(n);
+  for(int i=0;i<n;i++) cin>>a[i];
+  sort(a.begin(), a.end());
+  for(int i=0;i<n;i++){ if(i) cout<<" "; cout<<a[i]; }
+  return 0;
+}`
+  },
+  {
+    id: 16, title: "Sort an array in descending order",
+    tags: ["array","sort"],
+    cpp:
+`// Input: n then n integers
+// Output: sorted desc
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n; cin>>n;
+  vector<long long>a(n);
+  for(int i=0;i<n;i++) cin>>a[i];
+  sort(a.begin(), a.end(), greater<long long>());
+  for(int i=0;i<n;i++){ if(i) cout<<" "; cout<<a[i]; }
+  return 0;
+}`
+  },
+  {
+    id: 17, title: "Remove duplicate elements from an array",
+    tags: ["array"],
+    cpp:
+`// Input: n then n integers
+// Output: unique elements in original order
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n; cin>>n;
+  vector<long long>a(n);
+  for(int i=0;i<n;i++) cin>>a[i];
+  unordered_set<long long> seen;
+  bool first=true;
+  for(long long x: a){
+    if(!seen.count(x)){
+      seen.insert(x);
+      if(!first) cout<<" ";
+      cout<<x; first=false;
+    }
+  }
+  return 0;
+}`
+  },
+  {
+    id: 18, title: "Find duplicate elements in an array",
+    tags: ["array"],
+    cpp:
+`// Input: n then n integers
+// Output: duplicates (each printed once) in increasing order
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n; cin>>n;
+  unordered_map<long long,int> mp;
+  for(int i=0;i<n;i++){ long long x; cin>>x; mp[x]++; }
+  vector<long long> dup;
+  for(auto &p: mp) if(p.second>1) dup.push_back(p.first);
+  sort(dup.begin(), dup.end());
+  for(int i=0;i<(int)dup.size();i++){ if(i) cout<<" "; cout<<dup[i]; }
+  if(dup.empty()) cout<<"No Duplicates";
+  return 0;
+}`
+  },
+  {
+    id: 19, title: "Count frequency of each element in an array",
+    tags: ["array"],
+    cpp:
+`// Input: n then n integers
+// Output: element:count (sorted by element)
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n; cin>>n;
+  map<long long,int> mp;
+  for(int i=0;i<n;i++){ long long x; cin>>x; mp[x]++; }
+  for(auto &p: mp){
+    cout << p.first << ":" << p.second << "\\n";
+  }
+  return 0;
+}`
+  },
+  {
+    id: 20, title: "Find missing number in an array (1 to N)",
+    tags: ["array","math"],
+    cpp:
+`// Input: n (range 1..n) then n-1 numbers
+// Output: missing number
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  long long n; cin>>n;
+  long long sum = n*(n+1)/2;
+  for(int i=0;i<n-1;i++){ long long x; cin>>x; sum -= x; }
+  cout<<sum;
+  return 0;
+}`
+  },
+
+  // STRING-BASED (21-30)
+  {
+    id: 21, title: "Reverse a string",
+    tags: ["string"],
+    cpp:
+`// Input: line string (may contain spaces)
+// Output: reversed string
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  string s; getline(cin, s);
+  if(s.size()==0) getline(cin, s); // if previous input left newline
+  reverse(s.begin(), s.end());
+  cout<<s;
+  return 0;
+}`
+  },
+  {
+    id: 22, title: "Check whether a string is a palindrome",
+    tags: ["string"],
+    cpp:
+`// Input: string (no spaces) OR adapt to getline
+// Output: Palindrome / Not Palindrome
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  string s; cin>>s;
+  string t=s; reverse(t.begin(), t.end());
+  cout<<(t==s ? "Palindrome" : "Not Palindrome");
+  return 0;
+}`
+  },
+  {
+    id: 23, title: "Count vowels in a string",
+    tags: ["string"],
+    cpp:
+`// Input: line string
+// Output: vowel count
+#include <bits/stdc++.h>
+using namespace std;
+bool isV(char c){
+  c=tolower((unsigned char)c);
+  return c=='a'||c=='e'||c=='i'||c=='o'||c=='u';
+}
+int main(){
+  string s; getline(cin,s);
+  if(s.size()==0) getline(cin,s);
+  long long v=0;
+  for(char c: s) if(isV(c)) v++;
+  cout<<v;
+  return 0;
+}`
+  },
+  {
+    id: 24, title: "Count consonants in a string",
+    tags: ["string"],
+    cpp:
+`// Input: line string
+// Output: consonant count (only alphabetic)
+#include <bits/stdc++.h>
+using namespace std;
+bool isV(char c){
+  c=tolower((unsigned char)c);
+  return c=='a'||c=='e'||c=='i'||c=='o'||c=='u';
+}
+int main(){
+  string s; getline(cin,s);
+  if(s.size()==0) getline(cin,s);
+  long long cns=0;
+  for(char c: s){
+    if(isalpha((unsigned char)c) && !isV(c)) cns++;
+  }
+  cout<<cns;
+  return 0;
+}`
+  },
+  {
+    id: 25, title: "Count vowels and consonants in a string",
+    tags: ["string"],
+    cpp:
+`// Input: line string
+// Output: vowels consonants
+#include <bits/stdc++.h>
+using namespace std;
+bool isV(char c){
+  c=tolower((unsigned char)c);
+  return c=='a'||c=='e'||c=='i'||c=='o'||c=='u';
+}
+int main(){
+  string s; getline(cin,s);
+  if(s.size()==0) getline(cin,s);
+  long long v=0,c=0;
+  for(char ch: s){
+    if(isalpha((unsigned char)ch)){
+      if(isV(ch)) v++; else c++;
+    }
+  }
+  cout<<v<<" "<<c;
+  return 0;
+}`
+  },
+  {
+    id: 26, title: "Remove duplicate characters from a string",
+    tags: ["string"],
+    cpp:
+`// Input: string (keep first occurrences, preserve order)
+// Output: deduped string
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  string s; getline(cin,s);
+  if(s.size()==0) getline(cin,s);
+  vector<int> seen(256,0);
+  string out;
+  for(unsigned char ch: s){
+    if(!seen[ch]){
+      seen[ch]=1;
+      out.push_back((char)ch);
+    }
+  }
+  cout<<out;
+  return 0;
+}`
+  },
+  {
+    id: 27, title: "Count frequency of characters in a string",
+    tags: ["string"],
+    cpp:
+`// Input: line string
+// Output: char:count (for letters/digits/spaces too)
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  string s; getline(cin,s);
+  if(s.size()==0) getline(cin,s);
+  map<char,int> mp;
+  for(char c: s) mp[c]++;
+  for(auto &p: mp){
+    if(p.first==' ') cout<<"[space]:"<<p.second<<"\\n";
+    else cout<<p.first<<":"<<p.second<<"\\n";
+  }
+  return 0;
+}`
+  },
+  {
+    id: 28, title: "Find first non-repeating character in a string",
+    tags: ["string"],
+    cpp:
+`// Input: string (no spaces) OR adapt to getline
+// Output: first non-repeating char or -1
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  string s; cin>>s;
+  vector<int> cnt(256,0);
+  for(unsigned char c: s) cnt[c]++;
+  for(unsigned char c: s){
+    if(cnt[c]==1){ cout<<(char)c; return 0; }
+  }
+  cout<<-1;
+  return 0;
+}`
+  },
+  {
+    id: 29, title: "Check whether two strings are anagrams",
+    tags: ["string"],
+    cpp:
+`// Input: s1 s2 (single words)
+// Output: Anagram / Not Anagram
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  string a,b; cin>>a>>b;
+  if(a.size()!=b.size()){ cout<<"Not Anagram"; return 0; }
+  array<int,256> cnt{}; cnt.fill(0);
+  for(unsigned char c: a) cnt[c]++;
+  for(unsigned char c: b) cnt[c]--;
+  for(int x: cnt) if(x!=0){ cout<<"Not Anagram"; return 0; }
+  cout<<"Anagram";
+  return 0;
+}`
+  },
+  {
+    id: 30, title: "Convert string to uppercase / lowercase",
+    tags: ["string"],
+    cpp:
+`// Input: mode (U/L) then line string
+// Output: converted string
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  char mode; cin>>mode;
+  string dummy; getline(cin,dummy); // consume rest of line
+  string s; getline(cin,s);
+  for(char &c: s){
+    if(mode=='U') c = toupper((unsigned char)c);
+    else if(mode=='L') c = tolower((unsigned char)c);
+  }
+  cout<<s;
+  return 0;
+}`
+  },
+
+  // LOGIC & PATTERN (31-40)
+  {
+    id: 31, title: "Print star pattern (basic triangle)",
+    tags: ["pattern"],
+    cpp:
+`// Input: n
+// Output: right triangle stars
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n; cin>>n;
+  for(int i=1;i<=n;i++){
+    for(int j=1;j<=i;j++) cout<<"*";
+    cout<<"\\n";
+  }
+  return 0;
+}`
+  },
+  {
+    id: 32, title: "Print number pattern",
+    tags: ["pattern"],
+    cpp:
+`// Input: n
+// Output:
+// 1
+// 1 2
+// ...
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n; cin>>n;
+  for(int i=1;i<=n;i++){
+    for(int j=1;j<=i;j++){
+      if(j>1) cout<<" ";
+      cout<<j;
+    }
+    cout<<"\\n";
+  }
+  return 0;
+}`
+  },
+  {
+    id: 33, title: "Swap two numbers without using a third variable",
+    tags: ["math","logic"],
+    cpp:
+`// Input: a b
+// Output: swapped a b
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  long long a,b; cin>>a>>b;
+  a = a ^ b;
+  b = a ^ b;
+  a = a ^ b;
+  cout<<a<<" "<<b;
+  return 0;
+}`
+  },
+  {
+    id: 34, title: "Find GCD of two numbers",
+    tags: ["math"],
+    cpp:
+`// Input: a b
+// Output: gcd
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  long long a,b; cin>>a>>b;
+  cout<<std::gcd(a,b);
+  return 0;
+}`
+  },
+  {
+    id: 35, title: "Find LCM of two numbers",
+    tags: ["math"],
+    cpp:
+`// Input: a b
+// Output: lcm
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  long long a,b; cin>>a>>b;
+  long long g = std::gcd(a,b);
+  long long l = (a/g)*b; // reduce overflow risk
+  cout<< llabs(l);
+  return 0;
+}`
+  },
+  {
+    id: 36, title: "Check whether a number is a perfect number",
+    tags: ["number","math"],
+    cpp:
+`// Input: n
+// Output: Perfect / Not Perfect
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  long long n; cin>>n;
+  if(n<=1){ cout<<"Not Perfect"; return 0; }
+  long long sum=1;
+  for(long long i=2;i*i<=n;i++){
+    if(n%i==0){
+      sum+=i;
+      if(i*i!=n) sum+= (n/i);
+    }
+  }
+  cout<<(sum==n ? "Perfect" : "Not Perfect");
+  return 0;
+}`
+  },
+  {
+    id: 37, title: "Check whether a number is a strong number",
+    tags: ["number","math"],
+    cpp:
+`// Strong number: sum of factorial of digits equals number (e.g., 145)
+// Input: n
+// Output: Strong / Not Strong
+#include <bits/stdc++.h>
+using namespace std;
+long long fact(int d){
+  long long f=1; for(int i=2;i<=d;i++) f*=i;
+  return f;
+}
+int main(){
+  long long n; cin>>n;
+  long long x = llabs(n), t=x, sum=0;
+  if(x==0) sum = fact(0);
+  while(t){
+    int d=t%10; sum += fact(d); t/=10;
+  }
+  cout<<(sum==x ? "Strong" : "Not Strong");
+  return 0;
+}`
+  },
+  {
+    id: 38, title: "Check whether a number is a Harshad number",
+    tags: ["number","math"],
+    cpp:
+`// Harshad/Niven: n divisible by sum of digits
+// Input: n
+// Output: Harshad / Not Harshad
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  long long n; cin>>n;
+  long long x=llabs(n), t=x, s=0;
+  while(t){ s+=t%10; t/=10; }
+  if(s==0){ cout<<"Not Harshad"; return 0; }
+  cout<<((x%s==0) ? "Harshad" : "Not Harshad");
+  return 0;
+}`
+  },
+  {
+    id: 39, title: "Find power of a number without using built-in function",
+    tags: ["math"],
+    cpp:
+`// Input: a b (a^b), b>=0
+// Output: a^b
+#include <bits/stdc++.h>
+using namespace std;
+long long fastPow(long long a, long long b){
+  long long res=1;
+  while(b){
+    if(b&1) res*=a;
+    a*=a;
+    b>>=1;
+  }
+  return res;
+}
+int main(){
+  long long a,b; cin>>a>>b;
+  if(b<0){ cout<<"Invalid"; return 0; }
+  cout<<fastPow(a,b);
+  return 0;
+}`
+  },
+  {
+    id: 40, title: "Find square root of a number",
+    tags: ["math"],
+    cpp:
+`// Input: n
+// Output: floor(sqrt(n))
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  long long n; cin>>n;
+  if(n<0){ cout<<"Invalid"; return 0; }
+  cout<<(long long)floor(sqrt((long double)n));
+  return 0;
+}`
+  },
+
+  // MIXED & REAL TCS STYLE (41-50)
+  {
+    id: 41, title: "Move all zeros to the end of an array",
+    tags: ["array"],
+    cpp:
+`// Input: n then n integers
+// Output: array with zeros at end (stable)
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n; cin>>n;
+  vector<long long>a(n), out; out.reserve(n);
+  int zeros=0;
+  for(int i=0;i<n;i++){
+    cin>>a[i];
+    if(a[i]==0) zeros++;
+    else out.push_back(a[i]);
+  }
+  while(zeros--) out.push_back(0);
+  for(int i=0;i<n;i++){ if(i) cout<<" "; cout<<out[i]; }
+  return 0;
+}`
+  },
+  {
+    id: 42, title: "Count even and odd elements in an array",
+    tags: ["array"],
+    cpp:
+`// Input: n then n integers
+// Output: evenCount oddCount
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n; cin>>n;
+  long long even=0, odd=0, x;
+  for(int i=0;i<n;i++){
+    cin>>x;
+    if(x%2==0) even++; else odd++;
+  }
+  cout<<even<<" "<<odd;
+  return 0;
+}`
+  },
+  {
+    id: 43, title: "Find maximum occurring character in a string",
+    tags: ["string"],
+    cpp:
+`// Input: line string
+// Output: char with max frequency (ties -> first by appearance)
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  string s; getline(cin,s);
+  if(s.size()==0) getline(cin,s);
+  vector<int> cnt(256,0);
+  for(unsigned char c: s) cnt[c]++;
+  int best=-1; unsigned char ans=0;
+  for(unsigned char c: s){
+    if(cnt[c]>best){ best=cnt[c]; ans=c; }
+  }
+  cout<<(char)ans;
+  return 0;
+}`
+  },
+  {
+    id: 44, title: "Find minimum occurring character in a string",
+    tags: ["string"],
+    cpp:
+`// Input: line string
+// Output: char with min frequency among present chars (ties -> first by appearance)
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  string s; getline(cin,s);
+  if(s.size()==0) getline(cin,s);
+  vector<int> cnt(256,0);
+  for(unsigned char c: s) cnt[c]++;
+  int best=INT_MAX; unsigned char ans=0;
+  vector<int> seen(256,0);
+  for(unsigned char c: s){
+    if(!seen[c]){
+      seen[c]=1;
+      if(cnt[c]<best){ best=cnt[c]; ans=c; }
+    }
+  }
+  cout<<(char)ans;
+  return 0;
+}`
+  },
+  {
+    id: 45, title: "Replace spaces with a special character in a string",
+    tags: ["string"],
+    cpp:
+`// Input: specialChar (e.g., _) then line string
+// Output: updated string
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  char rep; cin>>rep;
+  string dummy; getline(cin,dummy);
+  string s; getline(cin,s);
+  for(char &c: s) if(c==' ') c=rep;
+  cout<<s;
+  return 0;
+}`
+  },
+  {
+    id: 46, title: "Find sum of elements in an array",
+    tags: ["array"],
+    cpp:
+`// Input: n then n integers
+// Output: sum
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n; cin>>n;
+  long long sum=0, x;
+  for(int i=0;i<n;i++){ cin>>x; sum+=x; }
+  cout<<sum;
+  return 0;
+}`
+  },
+  {
+    id: 47, title: "Rotate an array by K positions",
+    tags: ["array"],
+    cpp:
+`// Input: n k then n integers
+// Output: right rotation by k (use k%=n)
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n; long long k; cin>>n>>k;
+  vector<long long>a(n);
+  for(int i=0;i<n;i++) cin>>a[i];
+  if(n==0){ return 0; }
+  k%=n; if(k<0) k+=n;
+  rotate(a.rbegin(), a.rbegin()+k, a.rend()); // right rotate
+  for(int i=0;i<n;i++){ if(i) cout<<" "; cout<<a[i]; }
+  return 0;
+}`
+  },
+  {
+    id: 48, title: "Check whether an array is sorted",
+    tags: ["array"],
+    cpp:
+`// Input: n then n integers
+// Output: Sorted / Not Sorted (non-decreasing)
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  int n; cin>>n;
+  vector<long long>a(n);
+  for(int i=0;i<n;i++) cin>>a[i];
+  bool ok=true;
+  for(int i=1;i<n;i++) if(a[i]<a[i-1]){ ok=false; break; }
+  cout<<(ok ? "Sorted" : "Not Sorted");
+  return 0;
+}`
+  },
+  {
+    id: 49, title: "Convert decimal to binary",
+    tags: ["number","bit"],
+    cpp:
+`// Input: n (>=0)
+// Output: binary string
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  long long n; cin>>n;
+  if(n<0){ cout<<"Invalid"; return 0; }
+  if(n==0){ cout<<0; return 0; }
+  string b;
+  while(n){ b.push_back((n&1)+'0'); n>>=1; }
+  reverse(b.begin(), b.end());
+  cout<<b;
+  return 0;
+}`
+  },
+  {
+    id: 50, title: "Convert binary to decimal",
+    tags: ["number","bit"],
+    cpp:
+`// Input: binary string (e.g., 10101)
+// Output: decimal
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  string b; cin>>b;
+  long long val=0;
+  for(char c: b){
+    if(c!='0' && c!='1'){ cout<<"Invalid"; return 0; }
+    val = val*2 + (c-'0');
+  }
+  cout<<val;
+  return 0;
+}`
+  },
+];
+
+const STORAGE_KEY = "tcs_qt_checklist_v1";
+let checked = loadChecked();
+
+function loadChecked(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? JSON.parse(raw) : {};
+  }catch(e){ return {}; }
+}
+function saveChecked(){
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(checked));
+}
+
+function render(){
+  const q = document.getElementById("search").value.trim().toLowerCase();
+  const list = document.getElementById("list");
+  list.innerHTML = "";
+
+  const filtered = questions.filter(item => {
+    if(!q) return true;
+    const hay = (item.id + " " + item.title + " " + (item.tags||[]).join(" ")).toLowerCase();
+    return hay.includes(q);
+  });
+
+  filtered.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    const top = document.createElement("div");
+    top.className = "topline";
+
+    const cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.checked = !!checked[item.id];
+    cb.addEventListener("change", () => {
+      checked[item.id] = cb.checked;
+      saveChecked();
+      updateStats();
+    });
+
+    const text = document.createElement("div");
+    text.style.flex = "1";
+
+    const title = document.createElement("div");
+    title.className = "qtitle";
+    title.textContent = `${item.id}. ${item.title}`;
+
+    const meta = document.createElement("div");
+    meta.className = "qmeta";
+    meta.textContent = `Tags: ${(item.tags||[]).join(", ")}`;
+
+    const details = document.createElement("details");
+    const summary = document.createElement("summary");
+    summary.textContent = "Show C++ Answer";
+    details.appendChild(summary);
+
+    const pre = document.createElement("pre");
+    pre.textContent = item.cpp;
+    details.appendChild(pre);
+
+    const actions = document.createElement("div");
+    actions.className = "actions";
+
+    const copyBtn = document.createElement("button");
+    copyBtn.textContent = "Copy code";
+    const status = document.createElement("span");
+    status.className = "small";
+    status.style.alignSelf = "center";
+
+    copyBtn.addEventListener("click", async () => {
+      try{
+        await navigator.clipboard.writeText(item.cpp);
+        status.textContent = "Copied!";
+        status.classList.add("copied");
+        setTimeout(()=>{ status.textContent=""; status.classList.remove("copied"); }, 1200);
+      }catch(e){
+        status.textContent = "Copy failed (browser blocked clipboard).";
+      }
+    });
+
+    actions.appendChild(copyBtn);
+    actions.appendChild(status);
+
+    text.appendChild(title);
+    text.appendChild(meta);
+    text.appendChild(details);
+    text.appendChild(actions);
+
+    top.appendChild(cb);
+    top.appendChild(text);
+    card.appendChild(top);
+
+    list.appendChild(card);
+  });
+
+  updateStats(filtered.length);
+}
+
+function updateStats(filteredCount){
+  const stats = document.getElementById("stats");
+  const total = questions.length;
+  const done = Object.values(checked).filter(Boolean).length;
+  const pct = Math.round((done/total)*100);
+
+  stats.innerHTML = "";
+  stats.appendChild(makePill(`Progress: ${done}/${total} (${isNaN(pct)?0:pct}%)`));
+  stats.appendChild(makePill(`Showing: ${filteredCount ?? questions.length}`));
+  stats.appendChild(makePill(`Tip: Use search + tick completed`));
+}
+
+function makePill(text){
+  const el = document.createElement("div");
+  el.className = "pill";
+  el.textContent = text;
+  return el;
+}
+
+// Controls
+document.getElementById("search").addEventListener("input", render);
+
+document.getElementById("markAll").addEventListener("click", () => {
+  questions.forEach(q => checked[q.id] = true);
+  saveChecked();
+  render();
+});
+
+document.getElementById("unmarkAll").addEventListener("click", () => {
+  questions.forEach(q => checked[q.id] = false);
+  saveChecked();
+  render();
+});
+
+document.getElementById("reset").addEventListener("click", () => {
+  checked = {};
+  saveChecked();
+  render();
+});
+
+// Initial render
+render();
+</script>
+</body>
+</html>
