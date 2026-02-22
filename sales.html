@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faceless YouTube Mastery - Complete System + AI Tools + Mentorship</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+        
+        .logo span {
+            color: #ff4444;
+        }
+        
+        .nav-cta {
+            background: linear-gradient(135deg, #ff4444, #cc0000);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 68, 68, 0.4);
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255, 68, 68, 0.6);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            color: white;
+            padding: 120px 5% 80px;
+            margin-top: 70px;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(255, 68, 68, 0.2);
+            color: #ff4444;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 2px solid rgba(255, 68, 68, 0.3);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+        
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, #ff4444, #ff8844);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #ff4444;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hero-description {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin: 2rem 0;
+            color: #ddd;
+        }
+        
+        .unique-value {
+            background: rgba(255, 68, 68, 0.1);
+            border: 2px solid #ff4444;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Value Stack */
+        .value-stack {
+            background: #f9f9f9;
+        }
+        
+        .value-item {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .value-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            border-color: #ff4444;
+        }
+        
+        .value-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .value-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #000;
+            flex: 1;
+        }
+        
+        .value-price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #ff4444;
+            white-space: nowrap;
+            margin-left: 1rem;
+        }
+        
+        .value-description {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .value-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .value-list li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: #555;
+        }
+        
+        .value-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00cc66;
+            font-weight: 900;
+            font-size: 1.2rem;
+        }
+        
+        /* AI Tools Grid */
+        .ai-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .ai-tool-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .ai-tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+        
+        .ai-tool-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .ai-tool-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Pricing Section */
+        .pricing-section {
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            color: white;
+            text-align: center;
+        }
+        
+        .price-breakdown {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem auto;
+            max-width: 600px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .breakdown-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 1.1rem;
+        }
+        
+        .breakdown-item:last-child {
+            border-bottom: none;
+        }
+        
+        .total-value {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 3px solid #ff4444;
+        }
+        
+        .total-value .label {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .total-value .amount {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #ff4444;
+            text-decoration: line-through;
+            text-decoration-thickness: 4px;
+        }
+        
+        .retail-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffaa00;
+            margin: 2rem 0;
+        }
+        
+        .today-price {
+            font-size: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .today-price .label {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .today-price .amount {
+            font-size: 5rem;
+            font-weight: 900;
+            color: #00ff88;
+            display: block;
+            line-height: 1;
+        }
+        
+        .urgency-box {
+            background: linear-gradient(135deg, #ff4444, #cc0000);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 40px rgba(255, 68, 68, 0.4);
+        }
+        
+        .urgency-box .timer {
+            font-size: 3rem;
+            font-weight: 900;
+            margin: 1rem 0;
+        }
+        
+        .spots-left {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffff00;
+            margin: 1rem 0;
+        }
+        
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #00ff88, #00cc66);
+            color: #000;
+            font-size: 1.5rem;
+            font-weight: 900;
+            padding: 1.5rem 4rem;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 2rem 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 40px rgba(0, 255, 136, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(0, 255, 136, 0.6);
+        }
+        
+        .money-back {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            color: #aaa;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: #f9f9f9;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-right: 1rem;
+        }
+        
+        .testimonial-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .testimonial-stars {
+            color: #ffaa00;
+            font-size: 1.2rem;
+        }
+        
+        .testimonial-text {
+            line-height: 1.8;
+            color: #555;
+            font-style: italic;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            background: white;
+        }
+        
+        .faq-item {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #ff4444;
+        }
+        
+        .faq-question {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #000;
+        }
+        
+        .faq-answer {
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #000;
+            color: white;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+        
+        .footer-cta {
+            margin-bottom: 2rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats {
+                gap: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .value-header {
+                flex-direction: column;
+            }
+            
+            .value-price {
+                margin-left: 0;
+                margin-top: 0.5rem;
+            }
+            
+            .ai-tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .today-price .amount {
+                font-size: 3.5rem;
+            }
+            
+            .total-value .amount {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">YouTube <span>Mastery</span></div>
+            <a href="#pricing" class="nav-cta">Claim Your Spot →</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">⚡ LIMITED TIME OFFER</div>
+            <h1>From Zero to <span class="highlight">YouTube Empire</span> in 90 Days</h1>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Faceless Channels</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Students Mentored</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">200K+</span>
+                    <span class="stat-label">Social Followers</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+            </div>
+            
+            <p class="hero-description">
+                I spent 5 years building a YouTube automation empire through countless sleepless nights, testing hundreds of strategies, and losing thousands of dollars on what didn't work. I currently manage 20+ profitable faceless channels across multiple niches and have built a theme page with over 200,000 engaged followers.
+            </p>
+            
+            <p class="hero-description">
+                I've personally mentored over 100 students who are now running their own successful channels. Now, I'm handing you every single strategy, tool, and secret that took me half a decade to master.
+            </p>
+            
+            <div class="unique-value">
+                🎯 <strong>Here's What Makes This Different:</strong> I've combined premium courses, custom AI tools, AND personalized 1-on-1 mentorship all under one roof—something NO OTHER industry expert is offering. This isn't just another course you'll never finish. This is a complete system with my direct support to ensure you actually succeed.
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Stack Section -->
+    <section class="section value-stack">
+        <div class="section-header">
+            <h2 class="section-title">Everything You Get Inside</h2>
+            <p class="section-subtitle">A complete YouTube automation system with professional tools and personal mentorship</p>
+        </div>
+
+        <div class="value-item">
+            <div class="value-header">
+                <div class="value-title">🎯 Click Bang Strategy Course</div>
+                <div class="value-price">$500</div>
+            </div>
+            <p class="value-description">The exact system I use to create viral content that converts viewers into subscribers and buyers. This is the foundation of every successful channel I've built.</p>
+        </div>
+
+        <div class="value-item">
+            <div class="value-header">
+                <div class="value-title">📱 Funnel Shorts Strategy</div>
+                <div class="value-price">$500</div>
+            </div>
+            <p class="value-description">Master the art of YouTube Shorts to drive massive traffic to your long-form content. Learn the exact funnel that generates millions of views.</p>
+        </div>
+
+        <div class="value-item">
+            <div class="value-header">
+                <div class="value-title">💰 Digital Products Masterclass</div>
+                <div class="value-price">$500</div>
+            </div>
+            <p class="value-description">Create and sell digital products that generate passive income. From ideation to scaling—everything is covered.</p>
+        </div>
+
+        <div class="value-item">
+            <div class="value-header">
+                <div class="value-title">🔧 AI Tools & Automation Setup</div>
+                <div class="value-price">$500</div>
+            </div>
+            <p class="value-description">Learn how to build and monetize your own AI tools, plus get access to all of mine. Includes one-click payment integration and hosting setup.</p>
+        </div>
+
+        <div class="value-item">
+            <div class="value-header">
+                <div class="value-title">🎁 Affiliate SaaS System</div>
+                <div class="value-price">$500</div>
+            </div>
+            <p class="value-description">Generate additional revenue streams through strategic affiliate partnerships. My proven system for maximizing affiliate commissions.</p>
+        </div>
+
+        <div class="value-item">
+            <div class="value-header">
+                <div class="value-title">📧 Cold Emailing System</div>
+                <div class="value-price">$500</div>
+            </div>
+            <p class="value-description">Scale your outreach with high-converting cold email templates and automation systems that actually get responses.</p>
+        </div>
+
+        <div class="value-item">
+            <div class="value-header">
+                <div class="value-title">🎓 Pre-Recorded Master Strategies</div>
+                <div class="value-price">$500</div>
+            </div>
+            <p class="value-description">Seven comprehensive video courses covering every aspect of YouTube automation, each worth $500 individually. Watch and learn at your own pace.</p>
+        </div>
+    </section>
+
+    <!-- AI Tools Section -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">10 Custom AI Tools (All-In-One Platform)</h2>
+            <p class="section-subtitle">Professional-grade AI tools built specifically for YouTube automation—yours to keep forever</p>
+        </div>
+
+        <div class="ai-tools-grid">
+            <div class="ai-tool-card">
+                <div class="ai-tool-icon">✍️</div>
+                <h3 class="ai-tool-name">AI Scriptwriter</h3>
+                <p>Generate engaging, SEO-optimized scripts in seconds. Never stare at a blank page again.</p>
+            </div>
+
+            <div class="ai-tool-card">
+                <div class="ai-tool-icon">💡</div>
+                <h3 class="ai-tool-name">Viral Idea Generator</h3>
+                <p>Discover trending topics and viral video ideas before your competition does.</p>
+            </div>
+
+            <div class="ai-tool-card">
+                <div class="ai-tool-icon">🎤</div>
+                <h3 class="ai-tool-name">Voice Over AI (Unlimited Credits)</h3>
+                <p>Professional voice overs with unlimited generation. No monthly fees, no limits.</p>
+            </div>
+
+            <div class="ai-tool-card">
+                <div class="ai-tool-icon">🖼️</div>
+                <h3 class="ai-tool-name">Thumbnail Generator</h3>
+                <p>Create scroll-stopping thumbnails that boost your click-through rates by 300%.</p>
+            </div>
+
+            <div class="ai-tool-card">
+                <div class="ai-tool-icon">📊</div>
+                <h3 class="ai-tool-name">Video SEO Optimizer</h3>
+                <p>Rank higher in YouTube search with AI-powered title, description, and tag optimization.</p>
+            </div>
+
+            <div class="ai-tool-card">
+                <div class="ai-tool-icon">🎯</div>
+                <h3 class="ai-tool-name">Outlier Video Finder</h3>
+                <p>Find hidden gem videos that outperformed their channel's average—then replicate their success.</p>
+            </div>
+
+            <div class="ai-tool-card">
+                <div class="ai-tool-icon">📈</div>
+                <h3 class="ai-tool-name">Outlier Score Analyzer</h3>
+                <p>Identify which of your videos have viral potential before you even publish them.</p>
+            </div>
+
+            <div class="ai-tool-card">
+                <div class="ai-tool-icon">🔍</div>
+                <h3 class="ai-tool-name">Keyword Research Tool</h3>
+                <p>Discover low-competition, high-traffic keywords that will get your videos discovered.</p>
+            </div>
+
+            <div class="ai-tool-card">
+                <div class="ai-tool-icon">✅</div>
+                <h3 class="ai-tool-name">Script Safety Checker</h3>
+                <p>Ensure your content is monetization-friendly and compliant with YouTube policies.</p>
+            </div>
+
+            <div class="ai-tool-card">
+                <div class="ai-tool-icon">💬</div>
+                <h3 class="ai-tool-name">Comment Analyzer</h3>
+                <p>Understand your audience deeply by analyzing comments and sentiment at scale.</p>
+            </div>
+        </div>
+
+        <div class="value-item" style="margin-top: 3rem;">
+            <div class="value-header">
+                <div class="value-title">🎬 Ultimate AI Video Editor (One-Click Generation)</div>
+                <div class="value-price">$1,500</div>
+            </div>
+            <p class="value-description">The crown jewel of our AI toolkit. Generate complete, edited videos with a single click. This tool alone is worth the entire price of the program.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem; font-size: 1.5rem; font-weight: 700;">
+            <p>Total AI Tools Value: <span style="color: #ff4444;">$2,500</span></p>
+        </div>
+    </section>
+
+    <!-- Mentorship Section -->
+    <section class="section value-stack">
+        <div class="section-header">
+            <h2 class="section-title">Personal Mentorship & Support</h2>
+            <p class="section-subtitle">Direct access to me—not some support team, but the person who built all of this</p>
+        </div>
+
+        <div class="value-item">
+            <div class="value-header">
+                <div class="value-title">👨‍🏫 90-Day Personalized Mentorship</div>
+                <div class="value-price">$3,000</div>
+            </div>
+            <p class="value-description">Six 1-on-1 video calls with me over 90 days. I'll create a custom roadmap for YOUR specific niche and goals, then guide you every step of the way.</p>
+            <ul class="value-list">
+                <li>Week 1: Channel setup and niche selection strategy call</li>
+                <li>Week 3: Content strategy and first video review</li>
+                <li>Week 6: Growth optimization and monetization planning</li>
+                <li>Week 9: Scaling strategies and automation setup</li>
+                <li>Week 11: Advanced monetization and product creation</li>
+                <li>Week 13: Final review and long-term growth plan</li>
+            </ul>
+        </div>
+
+        <div class="value-item">
+            <div class="value-header">
+                <div class="value-title">💬 1 Year of Chat Support</div>
+                <div class="value-price">$1,500</div>
+            </div>
+            <p class="value-description">Direct access to me via chat for an entire year. Got a question at 2 AM? Send it. Stuck on something? I'm here. This alone is priceless.</p>
+        </div>
+
+        <div class="value-item">
+            <div class="value-header">
+                <div class="value-title">📢 Free Promotion on My 200K+ Page</div>
+                <div class="value-price">$500</div>
+            </div>
+            <p class="value-description">I'll promote your channel to my 200,000+ engaged followers. This kind of exposure typically costs hundreds of dollars per post—you get it FREE.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section pricing-section">
+        <div class="section-header">
+            <h2 class="section-title" style="color: white;">Let's Talk About Investment</h2>
+            <p class="section-subtitle" style="color: #aaa;">Here's the real value of what you're getting today</p>
+        </div>
+
+        <div class="price-breakdown">
+            <div class="breakdown-item">
+                <span>Click Bang Strategy Course</span>
+                <span>$500</span>
+            </div>
+            <div class="breakdown-item">
+                <span>Funnel Shorts Strategy</span>
+                <span>$500</span>
+            </div>
+            <div class="breakdown-item">
+                <span>Digital Products Masterclass</span>
+                <span>$500</span>
+            </div>
+            <div class="breakdown-item">
+                <span>AI Tools & Automation Setup</span>
+                <span>$500</span>
+            </div>
+            <div class="breakdown-item">
+                <span>Affiliate SaaS System</span>
+                <span>$500</span>
+            </div>
+            <div class="breakdown-item">
+                <span>Cold Emailing System</span>
+                <span>$500</span>
+            </div>
+            <div class="breakdown-item">
+                <span>Pre-Recorded Master Strategies</span>
+                <span>$500</span>
+            </div>
+            <div class="breakdown-item">
+                <span>10 Custom AI Tools Platform</span>
+                <span>$2,500</span>
+            </div>
+            <div class="breakdown-item">
+                <span>90-Day Personal Mentorship (6 Calls)</span>
+                <span>$3,000</span>
+            </div>
+            <div class="breakdown-item">
+                <span>1 Year Chat Support</span>
+                <span>$1,500</span>
+            </div>
+            <div class="breakdown-item">
+                <span>Free Promotion (200K+ Page)</span>
+                <span>$500</span>
+            </div>
+            
+            <div class="total-value">
+                <div class="label">Total Value:</div>
+                <div class="amount">$11,000</div>
+            </div>
+        </div>
+
+        <div class="retail-price">
+            Bare Minimum Price: $997
+        </div>
+
+        <div class="urgency-box">
+            <h3 style="font-size: 2rem; margin-bottom: 1rem;">⚡ 24-HOUR FLASH SALE ⚡</h3>
+            <p style="font-size: 1.3rem; margin-bottom: 1rem;">This price will NEVER be this low again</p>
+            <div class="timer" id="countdown">23:59:47</div>
+            <div class="spots-left">⚠️ ONLY 8 SPOTS LEFT ⚠️</div>
+            <p style="font-size: 1.2rem; margin-top: 1rem;">Once these spots are filled, the price jumps to $997</p>
+        </div>
+
+        <div class="today-price">
+            <div class="label">Your Investment Today:</div>
+            <span class="amount">$297</span>
+        </div>
+
+        <a href="#" class="cta-button">CLAIM YOUR SPOT NOW →</a>
+
+        <div class="money-back">
+            <p><strong>🛡️ 30-Day Money-Back Guarantee</strong></p>
+            <p>If you implement what I teach and don't see results, I'll refund every penny. Zero risk.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="section-header">
+            <h2 class="section-title">Success Stories From My Students</h2>
+            <p class="section-subtitle">Real results from real people who took action</p>
+        </div>
+
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">JD</div>
+                    <div class="testimonial-info">
+                        <h4>John D.</h4>
+                        <div class="testimonial-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-text">"I went from zero subscribers to 50,000 in just 4 months following the strategies in this program. The AI tools alone saved me 20+ hours per week. Best investment I've ever made."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">SM</div>
+                    <div class="testimonial-info">
+                        <h4>Sarah M.</h4>
+                        <div class="testimonial-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-text">"The 1-on-1 mentorship was a game-changer. Having someone who's actually doing this at scale guide you personally is worth 10x the price. I'm now running 3 profitable channels."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">RK</div>
+                    <div class="testimonial-info">
+                        <h4>Robert K.</h4>
+                        <div class="testimonial-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-text">"I was skeptical at first, but the results speak for themselves. Made my first $10K month in month 3. The funnel shorts strategy is pure gold."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">AP</div>
+                    <div class="testimonial-info">
+                        <h4>Amanda P.</h4>
+                        <div class="testimonial-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-text">"The AI video editor alone is worth the price. What used to take me 6 hours now takes 10 minutes. I've scaled from 1 video per week to 1 per day."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">MR</div>
+                    <div class="testimonial-info">
+                        <h4>Mike R.</h4>
+                        <div class="testimonial-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-text">"Finally, a course that's not just theory. Every strategy has been tested and proven. The outlier video finder helped me go viral 3 times in my first month."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">LC</div>
+                    <div class="testimonial-info">
+                        <h4>Lisa C.</h4>
+                        <div class="testimonial-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="testimonial-text">"The support is unmatched. Getting direct access to someone who's running 20+ channels and actually responds to messages? That's rare. This community is incredible."</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: white; border-radius: 15px; max-width: 800px; margin: 3rem auto;">
+            <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">📊 Student Results Snapshot</h3>
+            <p style="font-size: 1.2rem; line-height: 1.8; color: #555;">
+                <strong>100+ students mentored</strong> • Average time to first 10K subscribers: <strong>3.5 months</strong> • 
+                Average student channels: <strong>2.3</strong> • Student success rate: <strong>87%</strong> • 
+                Combined student subscriber count: <strong>2M+</strong>
+            </p>
+            <p style="margin-top: 1rem; font-style: italic; color: #888;">[Screenshots of student channels will be inserted here]</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq">
+        <div class="section-header">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know before joining</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Do I need any prior experience with YouTube?</h3>
+            <p class="faq-answer">Absolutely not! This program is designed for complete beginners. I walk you through every single step, from creating your channel to getting your first 100K subscribers. If you can watch a video and follow instructions, you can do this.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">How is this different from other YouTube courses?</h3>
+            <p class="faq-answer">Three major differences: (1) You get access to $2,500 worth of custom AI tools that automate 80% of the work, (2) You get direct 1-on-1 mentorship with someone actively running 20+ successful channels, not some guru who stopped doing it years ago, (3) You get a complete system—not just courses, but tools, support, and promotion all included.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">How much time do I need to dedicate to this?</h3>
+            <p class="faq-answer">With our AI tools, you can run a successful faceless channel in just 2-3 hours per week. Once you set up the systems, it becomes even more automated. Many of my students run multiple channels while working full-time jobs.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">What if I don't have any money to invest in content creation?</h3>
+            <p class="faq-answer">Perfect! That's exactly why faceless channels work so well. You don't need expensive cameras, microphones, or editing software. Our AI tools handle everything—scriptwriting, voiceovers, video editing, and thumbnails. Your only investment is this program.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">When can I start seeing results?</h3>
+            <p class="faq-answer">Most students see their first viral video within 2-4 weeks. Monetization typically happens within 60-90 days. However, this isn't a get-rich-quick scheme. You need to be consistent and implement what you learn. If you do, results are almost guaranteed.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Do the AI tools work for any niche?</h3>
+            <p class="faq-answer">Yes! The AI tools are built to work across all niches—motivation, finance, health, entertainment, education, you name it. I'll help you choose the best niche for your goals during our first mentorship call.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">What if I live outside the United States?</h3>
+            <p class="faq-answer">Even better! YouTube is global, and many of my most successful students are from outside the US. The strategies work anywhere in the world, and YouTube actually pays more in some countries. Plus, all mentorship calls can be done via Zoom at a time that works for you.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Is there a money-back guarantee?</h3>
+            <p class="faq-answer">Absolutely. If you go through the program, implement what I teach, attend the mentorship calls, and don't see any results within 30 days, I'll refund your money in full. No questions asked. You're taking zero risk here.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">How long do I have access to the courses and tools?</h3>
+            <p class="faq-answer">Lifetime access to all courses and AI tools. You can revisit the material anytime, and you'll automatically get any future updates I make to the program at no additional cost.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Why only 8 spots?</h3>
+            <p class="faq-answer">Because I personally mentor each student. With 6 one-on-one calls per student plus ongoing chat support, I can only handle a limited number of students at a time while maintaining the quality of mentorship. Once these 8 spots are filled, you'll have to wait for the next cohort—and the price will be higher.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">What happens after I join?</h3>
+            <p class="faq-answer">Immediately after payment, you'll receive login credentials to access all courses, AI tools, and the private community. Within 24 hours, I'll personally reach out to schedule your first mentorship call and create your personalized 90-day roadmap.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">Can I really build a full-time income from this?</h3>
+            <p class="faq-answer">Yes. I'm living proof, and so are many of my students. Once you have 2-3 monetized channels running, you can easily replace a full-time income. Some of my students are making $10K-$50K per month. It takes work, but the potential is absolutely there.</p>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="section pricing-section">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2 style="font-size: 3rem; font-weight: 900; margin-bottom: 2rem; color: white;">The Choice Is Yours</h2>
+            <p style="font-size: 1.3rem; line-height: 1.8; margin-bottom: 2rem; color: #ddd;">
+                You can keep watching YouTube videos hoping to piece together a strategy that works, wasting months or years trying to figure this out alone...
+            </p>
+            <p style="font-size: 1.3rem; line-height: 1.8; margin-bottom: 2rem; color: #ddd;">
+                Or you can take the shortcut and get direct access to someone who's already built 20+ successful channels, has all the tools ready for you, and will personally guide you every step of the way.
+            </p>
+            <p style="font-size: 1.5rem; font-weight: 700; margin-bottom: 3rem; color: #00ff88;">
+                For less than the cost of a used iPhone, you're getting a complete business system that could change your life.
+            </p>
+
+            <div class="urgency-box" style="margin-bottom: 2rem;">
+                <p style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">⏰ TIME IS RUNNING OUT</p>
+                <div class="timer" id="countdown2">23:59:47</div>
+                <p style="font-size: 1.8rem; font-weight: 800; color: #ffff00; margin: 1rem 0;">ONLY 8 SPOTS REMAINING</p>
+            </div>
+
+            <a href="#" class="cta-button" style="font-size: 1.8rem; padding: 2rem 5rem;">SECURE YOUR SPOT NOW →</a>
+
+            <p style="margin-top: 2rem; color: #aaa; font-size: 1.1rem;">
+                🔒 Secure payment processing • ✅ 30-day money-back guarantee • 💳 All major payment methods accepted
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-cta">
+            <h3 style="font-size: 2rem; margin-bottom: 1rem;">Still have questions?</h3>
+            <p style="margin-bottom: 1.5rem; color: #aaa;">Email: support@youtubemastery.com</p>
+        </div>
+        <p style="color: #666; font-size: 0.9rem;">© 2025 YouTube Mastery. All rights reserved.</p>
+        <p style="color: #666; font-size: 0.9rem; margin-top: 1rem;">
+            <a href="#" style="color: #666; text-decoration: none; margin: 0 1rem;">Privacy Policy</a> | 
+            <a href="#" style="color: #666; text-decoration: none; margin: 0 1rem;">Terms of Service</a> | 
+            <a href="#" style="color: #666; text-decoration: none; margin: 0 1rem;">Refund Policy</a>
+        </p>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const targetTime = now + (24 * 60 * 60 * 1000); // 24 hours from now
+            
+            const interval = setInterval(function() {
+                const currentTime = new Date().getTime();
+                const distance = targetTime - currentTime;
+                
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                const timeString = 
+                    String(hours).padStart(2, '0') + ":" + 
+                    String(minutes).padStart(2, '0') + ":" + 
+                    String(seconds).padStart(2, '0');
+                
+                document.getElementById('countdown').textContent = timeString;
+                document.getElementById('countdown2').textContent = timeString;
+                
+                if (distance < 0) {
+                    clearInterval(interval);
+                    document.getElementById('countdown').textContent = "EXPIRED";
+                    document.getElementById('countdown2').textContent = "EXPIRED";
+                }
+            }, 1000);
+        }
+        
+        updateCountdown();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
