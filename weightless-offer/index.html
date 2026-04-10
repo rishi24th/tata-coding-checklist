@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Calm Body Reset — 30-Day Hormone, Stress & Weight Reset System</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#141821;--bg2:#1A1F2E;--bg3:#242C3A;--card:#1D2530;--ch:#252E3C;--cb:#2A3344;--cb2:#343E52;
+--text:#E8ECF2;--t2:#AFBACD;--t3:#7A8699;--t4:#4E5A6E;
+--a1:#498AFB;--a2:#955BF5;--grad:linear-gradient(135deg,#498AFB,#955BF5);
+--teal:#0DD4B4;--td:#0AB89B;--tl:rgba(13,212,180,.12);
+--em:#34D399;--amber:#FBBF24;--al:rgba(251,191,36,.1);
+--rose:#FB7185;--rl:rgba(251,113,133,.1);
+--vl:rgba(149,91,245,.1);
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--t2);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 32px;height:56px;display:flex;align-items:center;justify-content:space-between;transition:all .4s;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(20,24,33,.6);border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(20,24,33,.92);border-color:var(--cb)}
+.nav-logo{font-family:'Bricolage Grotesque',sans-serif;font-size:1.2rem;font-weight:700;color:var(--text)}
+.nav-logo .lo{color:var(--teal)}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-link{font-size:.82rem;color:var(--t3);text-decoration:none;font-weight:500;transition:color .3s}
+.nav-link:hover{color:var(--teal)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 24px;border-radius:10px;font-size:.85rem;font-weight:600;text-decoration:none;transition:all .3s;border:none;cursor:pointer;font-family:'DM Sans',sans-serif}
+.btn-grad{background:var(--grad);color:#fff;box-shadow:0 4px 16px rgba(73,138,251,.2)}
+.btn-grad:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(73,138,251,.35)}
+.btn-teal{background:var(--teal);color:#0F172A;box-shadow:0 4px 16px rgba(13,212,180,.2)}
+.btn-teal:hover{background:var(--td);transform:translateY(-1px);box-shadow:0 6px 24px rgba(13,212,180,.3)}
+.btn-outline{background:transparent;color:var(--teal);border:1px solid rgba(13,212,180,.3)}
+.btn-outline:hover{background:rgba(13,212,180,.06);border-color:var(--teal)}
+.btn-lg{padding:16px 40px;font-size:.95rem;border-radius:12px}
+.btn-xl{padding:18px 48px;font-size:1rem;border-radius:14px}
+.btn .ar{transition:transform .3s}
+.btn:hover .ar{transform:translateX(4px)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:80px 24px;position:relative;overflow:hidden;background:var(--bg)}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 25% 30%,rgba(73,138,251,.07) 0%,transparent 55%),radial-gradient(ellipse at 75% 70%,rgba(149,91,245,.06) 0%,transparent 55%),radial-gradient(ellipse at 50% 100%,rgba(13,212,180,.04) 0%,transparent 40%);pointer-events:none}
+.mesh{position:absolute;inset:0;overflow:hidden;opacity:.25}
+.mesh span{position:absolute;width:2px;height:2px;background:var(--a1);border-radius:50%;animation:twk var(--d) ease-in-out infinite var(--dl)}
+@keyframes twk{0%,100%{opacity:.1;transform:scale(1)}50%{opacity:.7;transform:scale(1.6)}}
+
+.hero-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:2}
+.hero-content{color:var(--text)}
+.hero-pill{display:inline-flex;align-items:center;gap:9px;background:rgba(13,212,180,.08);border:1px solid rgba(13,212,180,.18);padding:8px 20px;border-radius:50px;font-size:.75rem;font-weight:600;color:var(--teal);letter-spacing:.8px;text-transform:uppercase;margin-bottom:28px;animation:fi .7s ease .2s both}
+.hero-pill .dot{width:7px;height:7px;background:var(--teal);border-radius:50%;box-shadow:0 0 8px rgba(13,212,180,.4);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 8px rgba(13,212,180,.4)}50%{box-shadow:0 0 18px rgba(13,212,180,.2)}}
+@keyframes fi{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+.hero h1{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:800;line-height:1.1;letter-spacing:-.5px;margin-bottom:20px;animation:fi .7s ease .35s both}
+.hero h1 .gr{background:linear-gradient(135deg,var(--teal),#5EEAD4,var(--a1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+.hero-sub{font-size:1.02rem;color:var(--t2);line-height:1.8;margin-bottom:32px;max-width:500px;font-weight:400;animation:fi .7s ease .5s both}
+.hero-sub strong{color:var(--text);font-weight:600}
+
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px;animation:fi .7s ease .65s both}
+.hero-trust{display:flex;gap:18px;flex-wrap:wrap;animation:fi .7s ease .8s both}
+.ht{display:flex;align-items:center;gap:5px;font-size:.78rem;color:var(--t3)}
+.ht .ic{color:var(--em);font-weight:700}
+
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center;animation:fi 1s ease .5s both}
+.fc-wrap{position:relative;width:100%;max-width:400px;height:380px}
+.fc{position:absolute;background:rgba(255,255,255,.04);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:22px 26px;animation:float 6s ease-in-out infinite}
+.fc.c1{top:10px;left:5px;animation-delay:0s}
+.fc.c2{top:55px;right:0;animation-delay:1s}
+.fc.c3{bottom:75px;left:25px;animation-delay:2s}
+.fc.c4{bottom:5px;right:15px;animation-delay:3s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.fc-n{font-family:'Bricolage Grotesque',sans-serif;font-size:1.8rem;font-weight:800;color:var(--text);line-height:1}
+.fc-l{font-size:.72rem;color:var(--t3);margin-top:3px;font-weight:500}
+.fc-i{font-size:1.4rem;margin-bottom:6px}
+.fc-bar{margin-top:8px;height:4px;border-radius:4px;background:rgba(255,255,255,.06);overflow:hidden}
+.fc-bf{height:100%;border-radius:4px;animation:fb 3s ease 1.5s both}
+@keyframes fb{from{width:0}to{width:var(--w)}}
+
+/* PROOF */
+.proof{background:var(--bg2);border-bottom:1px solid var(--cb);padding:16px 24px;text-align:center;font-size:.82rem;color:var(--t3);display:flex;justify-content:center;gap:28px;flex-wrap:wrap}
+.proof strong{color:var(--teal);font-weight:600}
+
+/* SECTIONS */
+.sec{padding:90px 24px}
+.sec-in{max-width:900px;margin:0 auto}
+.lbl{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:var(--teal);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.lbl::before{content:'';width:18px;height:2px;background:var(--teal);border-radius:2px}
+.lbl.ctr{justify-content:center}.lbl.ctr::before{display:none}
+.stl{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;color:var(--text);line-height:1.15;letter-spacing:-.5px;margin-bottom:14px}
+.sdsc{font-size:1rem;color:var(--t2);line-height:1.8;font-weight:400;max-width:620px}
+.sdsc strong{font-weight:600;color:var(--text)}
+
+.bg-card{background:var(--bg2)}
+.bg-dark{background:var(--bg)}
+.bg-deep{background:var(--bg);position:relative}
+
+/* PAIN */
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:36px}
+.pcard{padding:16px 20px;border-radius:12px;background:var(--card);border:1px solid var(--cb);display:flex;gap:10px;align-items:flex-start;transition:all .3s}
+.pcard:hover{border-color:rgba(251,113,133,.2);transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.2)}
+.px{width:22px;height:22px;min-width:22px;border-radius:6px;background:var(--rl);color:var(--rose);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:700}
+.pcard p{font-size:.85rem;color:var(--t2);line-height:1.55}
+.pquote{font-family:'Bricolage Grotesque',sans-serif;font-size:1.2rem;font-style:italic;color:var(--teal);line-height:1.4;padding:32px 0 0;text-align:center;max-width:500px;margin:0 auto}
+
+/* PILLARS */
+.pill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
+.pill{border-radius:16px;padding:28px 24px;text-align:center;border:1px solid var(--cb);background:var(--card);transition:all .4s}
+.pill:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.2);border-color:var(--cb2)}
+.pill-ic{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin:0 auto 14px}
+.pill.n .pill-ic{background:var(--tl)}.pill.s .pill-ic{background:rgba(73,138,251,.1)}.pill.r .pill-ic{background:var(--vl)}
+.pill h3{font-family:'Bricolage Grotesque',sans-serif;font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:6px}
+.pill p{font-size:.8rem;color:var(--t3);line-height:1.55}
+
+/* STACK */
+.scat{margin-bottom:44px}
+.scat-t{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:var(--teal);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.scat-t::before{content:'';width:14px;height:2px;background:var(--teal);border-radius:2px}
+
+.si{background:var(--card);border-radius:14px;padding:20px 24px;margin-bottom:8px;display:flex;align-items:flex-start;gap:16px;border:1px solid var(--cb);transition:all .35s;position:relative;overflow:hidden}
+.si:hover{border-color:rgba(73,138,251,.2);box-shadow:0 6px 24px rgba(0,0,0,.15);transform:translateY(-1px);background:var(--ch)}
+.si .bar{position:absolute;top:0;left:0;width:3px;height:100%;border-radius:3px 0 0 3px}
+.bar-t{background:var(--teal)}.bar-b{background:var(--a1)}.bar-p{background:var(--a2)}.bar-a{background:var(--amber)}
+
+.si-ic{width:44px;height:44px;min-width:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+.si-ic.t{background:var(--tl)}.si-ic.b{background:rgba(73,138,251,.1)}.si-ic.p{background:var(--vl)}.si-ic.a{background:var(--al)}
+
+.si-bd{flex:1}
+.si-bd h3{font-family:'Bricolage Grotesque',sans-serif;font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:2px}
+.tag{display:inline-block;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:3px 8px;border-radius:4px;margin-bottom:6px}
+.tag-v{background:rgba(73,138,251,.08);color:var(--a1);border:1px solid rgba(73,138,251,.1)}
+.tag-p{background:rgba(175,186,205,.06);color:var(--t3);border:1px solid rgba(175,186,205,.08)}
+.tag-n{background:var(--al);color:var(--amber);border:1px solid rgba(251,191,36,.12)}
+.tag-pr{background:var(--rl);color:var(--rose);border:1px solid rgba(251,113,133,.1)}
+.tag-au{background:var(--vl);color:var(--a2);border:1px solid rgba(149,91,245,.1)}
+.si-bd p{font-size:.82rem;color:var(--t3);line-height:1.55}
+.si-v{font-weight:700;font-size:.78rem;color:var(--teal);white-space:nowrap;background:var(--tl);padding:5px 12px;border-radius:6px;align-self:flex-start;flex-shrink:0;margin-left:8px;border:1px solid rgba(13,212,180,.12)}
+.si-v.bn{color:var(--amber);background:var(--al);border-color:rgba(251,191,36,.12)}
+.si.ft{border:1px solid rgba(73,138,251,.15);background:linear-gradient(135deg,var(--card),rgba(73,138,251,.04))}
+.si.bns{border:1px dashed rgba(149,91,245,.2)}
+
+/* BONUS DIV */
+.bdiv{text-align:center;margin:44px 0 18px;position:relative}
+.bdiv::before{content:'';position:absolute;top:50%;left:0;right:0;height:1px;background:var(--cb2)}
+.bdiv span{position:relative;background:var(--bg2);padding:0 18px;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--amber)}
+
+/* COMPARE */
+.cmp{width:100%;border-collapse:collapse;margin-top:28px}
+.cmp th{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--t4);padding:12px 14px;text-align:left;border-bottom:1px solid var(--cb)}
+.cmp th:last-child{text-align:center;color:var(--teal)}
+.cmp td{padding:12px 14px;font-size:.85rem;color:var(--t2);border-bottom:1px solid var(--cb)}
+.cmp td:last-child{text-align:center;font-weight:600;color:var(--teal)}
+.cmp tr:last-child td{border:none;font-weight:700;color:var(--text);font-size:.95rem}
+.cmp tr:last-child td:last-child{color:var(--teal);font-size:1.05rem}
+.cmp tr:hover td{background:rgba(73,138,251,.03)}
+
+/* PRICING */
+.prc{max-width:500px;margin:36px auto 0;background:var(--card);border:1px solid var(--cb);border-radius:20px;padding:44px 36px;text-align:center;position:relative;overflow:hidden}
+.prc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
+.po{font-size:.9rem;color:var(--t3)}
+.po .sk{font-family:'Bricolage Grotesque',sans-serif;font-size:1.6rem;font-weight:700;text-decoration:line-through;text-decoration-color:var(--rose);text-decoration-thickness:2px;margin-left:6px;color:var(--t4)}
+.plb{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--teal);margin:18px 0 6px}
+.pam{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(3.5rem,9vw,5rem);font-weight:800;color:var(--text);line-height:1;letter-spacing:-3px}
+.pam sup{font-size:.35em;vertical-align:super;letter-spacing:0}
+.psv{display:inline-block;background:var(--grad);color:#fff;padding:7px 22px;border-radius:24px;font-size:.82rem;font-weight:700;margin:18px 0 28px}
+.pft{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:20px}
+.pf{font-size:.78rem;color:var(--t3);display:flex;align-items:center;gap:4px}
+.pf .ch{color:var(--em);font-weight:700}
+
+/* GUARANTEE */
+.gic{width:64px;height:64px;border-radius:50%;background:var(--tl);display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin:0 auto 20px;border:2px solid rgba(13,212,180,.2)}
+
+/* WHO */
+.wgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:28px}
+.wc{background:var(--card);padding:16px 20px;border-radius:12px;display:flex;align-items:flex-start;gap:10px;border:1px solid var(--cb);transition:all .3s}
+.wc:hover{border-color:rgba(13,212,180,.2);transform:translateY(-1px)}
+.wck{color:var(--teal);font-weight:700;font-size:1rem;line-height:1.5;flex-shrink:0}
+.wc p{font-size:.85rem;color:var(--t2);line-height:1.55}
+
+/* FAQ */
+.fq{border-bottom:1px solid var(--cb);padding:18px 0}
+.fqq{font-weight:600;font-size:.92rem;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;transition:color .3s}
+.fqq:hover{color:var(--teal)}
+.fqi{width:26px;height:26px;min-width:26px;border-radius:7px;border:1px solid var(--cb2);display:flex;align-items:center;justify-content:center;font-size:.8rem;color:var(--teal);transition:all .3s}
+.fq.open .fqi{background:var(--teal);color:#0F172A;transform:rotate(45deg);border-color:var(--teal)}
+.fqa{max-height:0;overflow:hidden;transition:max-height .5s ease,padding .5s ease;font-size:.85rem;color:var(--t3);line-height:1.65}
+.fq.open .fqa{max-height:400px;padding-top:12px}
+
+/* FINAL */
+.final{padding:90px 24px;text-align:center;position:relative;overflow:hidden;background:var(--bg)}
+.final::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(73,138,251,.05) 0%,transparent 60%);pointer-events:none}
+.final-in{position:relative;z-index:2;max-width:580px;margin:0 auto}
+.final h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800;color:var(--text);line-height:1.15;margin-bottom:10px;letter-spacing:-.5px}
+.final p{font-size:.95rem;color:var(--t3);margin-bottom:24px}
+.final .prw{display:flex;justify-content:center;align-items:baseline;gap:12px;margin-bottom:24px}
+.final .prw .old{font-family:'Bricolage Grotesque',sans-serif;font-size:1.2rem;color:var(--t4);text-decoration:line-through;text-decoration-color:var(--rose)}
+.final .prw .new{font-family:'Bricolage Grotesque',sans-serif;font-size:2.8rem;font-weight:800;color:var(--teal);letter-spacing:-2px}
+.final-sub{font-size:.78rem;color:var(--t4);margin-top:14px}
+
+.footer{background:var(--bg);border-top:1px solid var(--cb);color:var(--t4);text-align:center;padding:28px 24px;font-size:.75rem}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(.16,1,.3,1)}
+.rv.vis{opacity:1;transform:translateY(0)}
+
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;text-align:center}.hero-sub{margin:0 auto 32px}.hero-cta{justify-content:center}.hero-trust{justify-content:center}.hero-visual{display:none}}
+@media(max-width:768px){.pgrid,.wgrid{grid-template-columns:1fr}.pill-grid{grid-template-columns:1fr}.si{flex-direction:column;gap:12px;padding:16px 18px}.si-v{margin-left:0}.nav-links .nav-link{display:none}.pft{flex-direction:column;align-items:center;gap:8px}.prc{padding:32px 24px}}
+@media(max-width:480px){.hero h1{font-size:2rem}.proof{flex-direction:column;gap:6px}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-logo">Calm<span class="lo">Body</span>Reset</div>
+  <div class="nav-links">
+    <a href="#stack" class="nav-link">What's Inside</a>
+    <a href="#pricing" class="nav-link">Pricing</a>
+    <a href="https://buy.stripe.com/dRm8wPcframY9Z3bdV2go0P" class="btn btn-grad">Get Access — $99</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="mesh" id="mesh"></div>
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-pill"><span class="dot"></span> Limited Offer — 93% Off</div>
+      <h1>Lose the Stubborn Weight.<br>Lower Your Cortisol.<br><span class="gr">Reset Your Body in 30 Days.</span></h1>
+      <p class="hero-sub">The complete <strong>hormone, stress &amp; weight reset system</strong> for women dealing with cortisol overload, histamine sensitivity, and stubborn weight — all in one $99 bundle with <strong>lifetime access.</strong></p>
+      <div class="hero-cta">
+        <a href="https://buy.stripe.com/dRm8wPcframY9Z3bdV2go0P" class="btn btn-teal btn-lg">Get Instant Access — $99 <span class="ar">&rarr;</span></a>
+        <a href="#stack" class="btn btn-outline btn-lg">See what's inside</a>
+      </div>
+      <div class="hero-trust">
+        <div class="ht"><span class="ic">&#10003;</span> 17 digital products</div>
+        <div class="ht"><span class="ic">&#10003;</span> Instant delivery</div>
+        <div class="ht"><span class="ic">&#10003;</span> 30-day guarantee</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="fc-wrap">
+        <div class="fc c1"><div class="fc-i">&#128200;</div><div class="fc-n">30</div><div class="fc-l">Day Reset Protocol</div><div class="fc-bar"><div class="fc-bf" style="--w:85%;background:linear-gradient(90deg,var(--teal),var(--a1))"></div></div></div>
+        <div class="fc c2"><div class="fc-i">&#9878;</div><div class="fc-n">2</div><div class="fc-l">Phases — Detox &amp; Rebuild</div></div>
+        <div class="fc c3"><div class="fc-i">&#128218;</div><div class="fc-n" data-c="1290">0</div><div class="fc-l">Total Value ($)</div><div class="fc-bar"><div class="fc-bf" style="--w:93%;background:linear-gradient(90deg,var(--a1),var(--a2))"></div></div></div>
+        <div class="fc c4"><div class="fc-i">&#128170;</div><div class="fc-n">$99</div><div class="fc-l">One-Time — Yours Forever</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="proof">
+  <span><strong>WeightWatchers:</strong> $300+/yr</span>
+  <span><strong>Noom HRT:</strong> $828+/yr</span>
+  <span><strong>Calm Body Reset:</strong> $99 once, forever</span>
+</div>
+
+<section class="sec bg-card rv">
+  <div class="sec-in">
+    <div class="lbl">The reality</div>
+    <h2 class="stl">Your body changed overnight.<br>Your plan didn't.</h2>
+    <p class="sdsc">Whether it's <strong>cortisol overload</strong>, <strong>histamine intolerance</strong>, or <strong>hormonal shifts</strong> from perimenopause — your body is playing by new rules. Old diets don't work here.</p>
+    <div class="pgrid">
+      <div class="pcard"><div class="px">&times;</div><p>Belly fat that appeared overnight and refuses to budge no matter what you eat</p></div>
+      <div class="pcard"><div class="px">&times;</div><p>Cortisol so high your body stays in fight-or-flight — storing fat, wrecking sleep</p></div>
+      <div class="pcard"><div class="px">&times;</div><p>Histamine reactions — bloating, flushing, headaches, food sensitivities</p></div>
+      <div class="pcard"><div class="px">&times;</div><p>3 AM wake-ups, brain fog, cravings that hijack your willpower</p></div>
+      <div class="pcard"><div class="px">&times;</div><p>Gut issues — 94% of women in hormonal transition report digestive problems</p></div>
+      <div class="pcard"><div class="px">&times;</div><p>Bone density declining, muscle shrinking, metabolism slowing silently</p></div>
+      <div class="pcard"><div class="px">&times;</div><p>Spending $50-100/month on supplements that might do nothing</p></div>
+      <div class="pcard"><div class="px">&times;</div><p>Your partner doesn't understand. Your doctor says "it's just aging."</p></div>
+    </div>
+    <p class="pquote">"It's not your willpower. It's your hormones, your cortisol, and your histamine load."</p>
+  </div>
+</section>
+
+<section class="sec bg-dark rv" style="text-align:center">
+  <div class="sec-in"><div class="lbl ctr">The system</div>
+  <h2 class="stl" style="margin:0 auto 14px;max-width:660px">The Complete Calm Body Reset System</h2>
+  <p class="sdsc" style="margin:0 auto;max-width:600px">A <strong>30-day, 2-phase digital system</strong> covering cortisol management, histamine reduction, gut healing, strength training, stress relief, and emotional support. <strong>17 products. One price. Yours forever.</strong></p>
+  </div>
+</section>
+
+<section class="sec bg-card rv" style="text-align:center">
+  <div class="sec-in">
+    <h2 class="stl">Three pillars. One complete transformation.</h2>
+    <div class="pill-grid">
+      <div class="pill n"><div class="pill-ic">&#127860;</div><h3>Nourish</h3><p>Anti-inflammatory meal plans, low-histamine recipes, gut reset protocol, shopping guides, and gentle supplement recommendations</p></div>
+      <div class="pill s"><div class="pill-ic">&#128170;</div><h3>Strengthen</h3><p>Joint-safe strength masterclass, bone-density movements, body composition tracking week 1 to week 4</p></div>
+      <div class="pill r"><div class="pill-ic">&#128156;</div><h3>Restore</h3><p>Cortisol-lowering protocols, sleep reset, daily affirmation journal, symptom tracking, partner communication tools</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg-dark" id="stack">
+  <div class="sec-in">
+    <div style="text-align:center;margin-bottom:48px" class="rv"><div class="lbl ctr">What's inside</div><h2 class="stl">Everything you get for $99</h2><p class="sdsc" style="margin:0 auto">17 digital products covering nutrition, movement, gut health, stress, mindset, and support</p></div>
+
+    <div class="scat rv"><div class="scat-t">Core 30-Day Program</div>
+      <div class="si ft"><div class="bar bar-t"></div><div class="si-ic t">&#128203;</div><div class="si-bd"><h3>The 30-Day Calm Body Reset Program</h3><span class="tag tag-p">2-Phase Protocol</span><p><b>Phase 1 (Days 1-14): Detox &amp; Calm</b> — Lower cortisol, reduce histamine, reset gut. <b>Phase 2 (Days 15-30): Rebuild &amp; Burn</b> — Reintroduce foods, optimize fat-burning, build habits.</p></div><div class="si-v">$197</div></div>
+      <div class="si"><div class="bar bar-t"></div><div class="si-ic t">&#128722;</div><div class="si-bd"><h3>Hormone-Friendly Shopping Guide</h3><span class="tag tag-pr">Printable</span><p>Aisle-by-aisle lists for Phase 1 &amp; Phase 2 with budget swaps and hormone-safe brands.</p></div><div class="si-v">$37</div></div>
+      <div class="si"><div class="bar bar-t"></div><div class="si-ic t">&#127869;</div><div class="si-bd"><h3>Eating Out Guide</h3><span class="tag tag-p">PDF</span><p>What to order at 20+ restaurants while staying on plan. Low-histamine options mapped out.</p></div><div class="si-v">$27</div></div>
+      <div class="si"><div class="bar bar-t"></div><div class="si-ic t">&#128214;</div><div class="si-bd"><h3>Daily Food Diary &amp; Reset Journal</h3><span class="tag tag-pr">Printable</span><p>Tracks meals, water, energy, sleep, histamine reactions, cortisol symptoms, mood, cravings.</p></div><div class="si-v">$29</div></div>
+      <div class="si"><div class="bar bar-t"></div><div class="si-ic t">&#128200;</div><div class="si-bd"><h3>4-Week Body Composition Tracker</h3><span class="tag tag-pr">Printable</span><p>Four checkpoints (Week 1-4) + Start vs. Finish comparison. Weight, waist, hips, clothes fit.</p></div><div class="si-v">$19</div></div>
+      <div class="si"><div class="bar bar-t"></div><div class="si-ic t">&#127777;</div><div class="si-bd"><h3>Symptom &amp; Histamine Reaction Tracker</h3><span class="tag tag-pr">Printable</span><p>Track 34+ symptoms daily — cortisol spikes, histamine reactions, hot flashes, brain fog, mood.</p></div><div class="si-v">$19</div></div>
+      <div class="si"><div class="bar bar-t"></div><div class="si-ic t">&#9989;</div><div class="si-bd"><h3>30-Day Daily Check-In System</h3><span class="tag tag-pr">Printable</span><p>2-minute daily accountability form for all 30 days.</p></div><div class="si-v">$19</div></div>
+      <div class="si"><div class="bar bar-t"></div><div class="si-ic t">&#128300;</div><div class="si-bd"><h3>Program Science &amp; Definition Guide</h3><span class="tag tag-p">PDF</span><p>The science behind cortisol, histamine-estrogen axis, gut-brain triangle, sleep, and exercise.</p></div><div class="si-v">$29</div></div>
+      <div class="si"><div class="bar bar-t"></div><div class="si-ic t">&#9878;</div><div class="si-bd"><h3>Post-Reset Stabilization Guide</h3><span class="tag tag-p">PDF</span><p>Life after day 30. Food reintroduction, maintenance habits, long-term cortisol management.</p></div><div class="si-v">$47</div></div>
+      <div class="si"><div class="bar bar-t"></div><div class="si-ic t">&#128075;</div><div class="si-bd"><h3>Welcome Guide &amp; Quick-Start Roadmap</h3><span class="tag tag-p">PDF</span><p>Everything explained in 10 minutes. Zero overwhelm.</p></div><div class="si-v">$15</div></div>
+      <div class="si"><div class="bar bar-t"></div><div class="si-ic t">&#128138;</div><div class="si-bd"><h3>Gentle Supplement Recommendation Guide</h3><span class="tag tag-p">Evidence-Based</span><p>12 supplements rated honestly — magnesium, quercetin, ashwagandha, DAO enzymes, vitamin D, omega-3. What works, what's hype.</p></div><div class="si-v">$37</div></div>
+    </div>
+
+    <div class="scat rv"><div class="scat-t">Masterclass &amp; Digital Tools</div>
+      <div class="si ft"><div class="bar bar-b"></div><div class="si-ic b">&#127908;</div><div class="si-bd"><h3>The Cortisol, Stress &amp; Hormonal Weight Masterclass</h3><span class="tag tag-v">Video — 35-40 Min</span><p>One comprehensive masterclass covering cortisol mechanisms, histamine-estrogen connection, menopause metabolism, and your action plan.</p></div><div class="si-v">$127</div></div>
+      <div class="si ft"><div class="bar bar-b"></div><div class="si-ic b">&#127859;</div><div class="si-bd"><h3>Gut Healing &amp; Meal Prep Masterclass</h3><span class="tag tag-v">Video — 45-60 Min</span><p>Part 1: Gut reset protocol (5-step system). Part 2: 2-hour Sunday meal prep with smoothie recipes and snack ideas.</p></div><div class="si-v">$127</div></div>
+      <div class="si"><div class="bar bar-a"></div><div class="si-ic a">&#128187;</div><div class="si-bd"><h3>Notion Life Dashboard — Reset Edition</h3><span class="tag tag-n">Notion Template</span><p>Track meals, symptoms, measurements, check-ins, and journal entries in one digital workspace.</p></div><div class="si-v">$67</div></div>
+    </div>
+
+    <div class="bdiv rv"><span>&#127873; Exclusive Bonuses — Free Today</span></div>
+
+    <div class="scat rv">
+      <div class="si bns"><div class="bar bar-p"></div><div class="si-ic p">&#128564;</div><div class="si-bd"><h3>BONUS: Sleep &amp; Cortisol Reset Protocol</h3><span class="tag tag-au">7-Day Protocol</span><p>Evening routine to lower cortisol, stop night sweats, and sleep through the night.</p></div><div class="si-v bn">$47</div></div>
+      <div class="si bns"><div class="bar bar-p"></div><div class="si-ic p">&#128221;</div><div class="si-bd"><h3>BONUS: 30-Day Affirmation &amp; Mindset Journal</h3><span class="tag tag-pr">30-Day Printable</span><p>Daily prompts for self-compassion during hormonal transition.</p></div><div class="si-v bn">$27</div></div>
+      <div class="si bns"><div class="bar bar-p"></div><div class="si-ic p">&#128140;</div><div class="si-bd"><h3>BONUS: Partner &amp; Family Communication Toolkit</h3><span class="tag tag-p">PDF + Scripts</span><p>Shareable guide for partners + conversation scripts for asking for support.</p></div><div class="si-v bn">$19</div></div>
+      <div class="si bns"><div class="bar bar-p"></div><div class="si-ic p">&#128137;</div><div class="si-bd"><h3>BONUS: Grocery Swap Cheat Sheet</h3><span class="tag tag-pr">Fridge Magnet</span><p>One-page: inflammatory foods mapped to anti-inflammatory, low-histamine alternatives.</p></div><div class="si-v bn">$17</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg-card rv" style="text-align:center">
+  <div class="sec-in"><h2 class="stl">How this compares</h2>
+  <table class="cmp">
+    <thead><tr><th>What you'd pay elsewhere</th><th>Cost</th><th>Included</th></tr></thead>
+    <tbody>
+      <tr><td>WeightWatchers Menopause (12 months)</td><td>$300–$840/yr</td><td>&#10003;</td></tr>
+      <tr><td>Noom HRT Program (12 months)</td><td>$828–$1,788/yr</td><td>&#10003;</td></tr>
+      <tr><td>Cortisol &amp; Hormonal Weight Masterclass</td><td>$97–$199</td><td>&#10003;</td></tr>
+      <tr><td>Gut Healing Course + Meal Prep</td><td>$67–$149</td><td>&#10003;</td></tr>
+      <tr><td>1-on-1 Nutrition Coaching (3 months)</td><td>$600–$1,500</td><td>&#10003;</td></tr>
+      <tr><td>Supplement Consultation</td><td>$75–$200</td><td>&#10003;</td></tr>
+      <tr><td><strong>Total separately</strong></td><td><strong>$2,000+</strong></td><td><strong>$99</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="sec bg-dark" id="pricing">
+  <div class="sec-in rv" style="text-align:center">
+    <div class="lbl ctr" style="color:var(--teal)">Special offer</div>
+    <h2 class="stl" style="margin:0 auto 8px">Everything above. One price. Yours forever.</h2>
+    <div class="prc">
+      <div class="po">Total value: <span class="sk">$1,290</span></div>
+      <div class="plb">Today you pay only</div>
+      <div class="pam"><sup>$</sup>99</div>
+      <div class="psv">You Save $1,191 — 93% Off</div>
+      <a href="https://buy.stripe.com/dRm8wPcframY9Z3bdV2go0P" class="btn btn-teal btn-xl" style="width:100%;justify-content:center">Yes! I Want the Complete System <span class="ar">&rarr;</span></a>
+    </div>
+    <div class="pft">
+      <div class="pf"><span class="ch">&#10003;</span> Instant delivery</div>
+      <div class="pf"><span class="ch">&#10003;</span> Lifetime access</div>
+      <div class="pf"><span class="ch">&#10003;</span> 30-day guarantee</div>
+      <div class="pf"><span class="ch">&#10003;</span> Any device</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec bg-card rv" style="text-align:center">
+  <div class="sec-in" style="max-width:600px;margin:0 auto">
+    <div class="gic">&#128737;</div>
+    <h2 class="stl" style="margin:0 auto 12px">30-Day "Feel the Difference" Guarantee</h2>
+    <p class="sdsc" style="margin:0 auto">Try the entire system for 30 days. If you don't feel a noticeable difference in energy, sleep, bloating, or how your clothes fit — full refund. No questions. The risk is entirely ours.</p>
+  </div>
+</section>
+
+<section class="sec bg-dark rv">
+  <div class="sec-in"><h2 class="stl" style="text-align:center">This was built for you if...</h2>
+  <div class="wgrid">
+    <div class="wc"><span class="wck">&#10003;</span><p>High cortisol, chronic stress, or burnout causing weight gain</p></div>
+    <div class="wc"><span class="wck">&#10003;</span><p>Suspected histamine intolerance — bloating, flushing, headaches</p></div>
+    <div class="wc"><span class="wck">&#10003;</span><p>Perimenopause, menopause, or postmenopause</p></div>
+    <div class="wc"><span class="wck">&#10003;</span><p>Want to start strength training but feel intimidated</p></div>
+    <div class="wc"><span class="wck">&#10003;</span><p>Tired of wasting money on supplements that might not work</p></div>
+    <div class="wc"><span class="wck">&#10003;</span><p>Want your family to understand what you're going through</p></div>
+  </div>
+  </div>
+</section>
+
+<section class="sec bg-card">
+  <div class="sec-in rv" style="max-width:680px">
+    <h2 class="stl" style="text-align:center;margin-bottom:32px">Common questions</h2>
+    <div class="fq"><div class="fqq">How is this delivered?<span class="fqi">+</span></div><div class="fqa">Everything is digital. Instant access to all guides, trackers, masterclasses, and templates after purchase. The Notion dashboard is a free template you duplicate.</div></div>
+    <div class="fq"><div class="fqq">Is this only for menopause?<span class="fqi">+</span></div><div class="fqa">No. It's designed for any woman dealing with cortisol overload, histamine sensitivity, chronic stress, or hormonal weight gain — whether you're 35 or 65.</div></div>
+    <div class="fq"><div class="fqq">What's Phase 1 vs. Phase 2?<span class="fqi">+</span></div><div class="fqa">Phase 1 (Days 1-14) calms — lowering cortisol, reducing histamine, resetting gut. Phase 2 (Days 15-30) rebuilds — reintroducing foods, optimizing fat-burning, building sustainable habits.</div></div>
+    <div class="fq"><div class="fqq">I'm not tech-savvy. Can I still use this?<span class="fqi">+</span></div><div class="fqa">Yes. Every guide is a printable PDF. Masterclasses play in any browser. The Notion template is optional.</div></div>
+    <div class="fq"><div class="fqq">How is this different from WeightWatchers or Noom?<span class="fqi">+</span></div><div class="fqa">Those are monthly subscriptions for general weight loss. This is a one-time $99 purchase for cortisol, histamine, and hormonal challenges — 17 products, no recurring fees.</div></div>
+    <div class="fq"><div class="fqq">What if it doesn't work?<span class="fqi">+</span></div><div class="fqa">30-day money-back guarantee. Full refund if you don't notice a difference. Zero risk.</div></div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="final-in rv">
+    <h2>Your body changed.<br>Now your plan catches up.</h2>
+    <p>17 digital products. 2 video masterclasses. Zero monthly fees.</p>
+    <div class="prw"><span class="old">$1,290</span><span class="new">$99</span></div>
+    <a href="https://buy.stripe.com/dRm8wPcframY9Z3bdV2go0P" class="btn btn-teal btn-xl">Get the Complete Calm Body Reset <span class="ar">&rarr;</span></a>
+    <p class="final-sub">30-day guarantee &nbsp;&#183;&nbsp; Instant access &nbsp;&#183;&nbsp; Lifetime ownership</p>
+  </div>
+</section>
+
+<footer class="footer">&copy; 2026 Calm Body Reset. All rights reserved. For informational purposes only — not medical advice.</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50)});
+const m=document.getElementById('mesh');for(let i=0;i<50;i++){const s=document.createElement('span');s.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;--d:${2+Math.random()*4}s;--dl:${Math.random()*4}s`;m.appendChild(s)}
+function ac(el,t){const d=2200,st=performance.now();function s(n){const p=Math.min((n-st)/d,1),e=1-Math.pow(1-p,3),v=Math.round(e*t);el.textContent='$'+v.toLocaleString();if(p<1)requestAnimationFrame(s)}requestAnimationFrame(s)}
+const co=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){const t=parseInt(en.target.dataset.c);if(t)ac(en.target,t);co.unobserve(en.target)}})},{threshold:.5});
+document.querySelectorAll('[data-c]').forEach(el=>co.observe(el));
+const ro=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('vis');ro.unobserve(en.target)}})},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+document.querySelectorAll('.fqq').forEach(q=>{q.addEventListener('click',()=>{const i=q.parentElement;document.querySelectorAll('.fq').forEach(f=>{if(f!==i)f.classList.remove('open')});i.classList.toggle('open')})});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+</script>
+</body>
+</html>
