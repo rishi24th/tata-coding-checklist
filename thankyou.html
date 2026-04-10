@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Calm Body Reset — Access Portal</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#1A1F2E;--bg2:#242C3A;--card:#1D2530;--card-h:#232B38;--cb:#2A3344;--text:#E8ECF2;--t2:#AFBACD;--t3:#7A8699;--t4:#4E5A6E;--a1:#498AFB;--a2:#955BF5;--teal:#0DD4B4;--td:#0AB89B;--em:#34D399;--amber:#FBBF24;--rose:#FB7185}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.6;min-height:100vh}
+.hero{background:var(--bg);position:relative;overflow:hidden;border-bottom:1px solid var(--cb)}
+.hero-glow{position:absolute;top:-40%;left:20%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(73,138,251,.08) 0%,transparent 60%);pointer-events:none}
+.hero-glow2{position:absolute;bottom:-30%;right:10%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(149,91,245,.06) 0%,transparent 60%);pointer-events:none}
+.hero-content{position:relative;z-index:2;max-width:700px;margin:0 auto;text-align:center;padding:64px 24px 48px}
+.success-pill{display:inline-flex;align-items:center;gap:10px;background:rgba(13,212,180,.08);border:1px solid rgba(13,212,180,.2);padding:8px 22px;border-radius:50px;margin-bottom:24px;animation:fadeIn .6s ease .2s both}
+.success-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 10px rgba(13,212,180,.5);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 10px rgba(13,212,180,.5)}50%{box-shadow:0 0 20px rgba(13,212,180,.3)}}
+.success-pill span{font-size:.78rem;font-weight:600;color:var(--teal);letter-spacing:.5px}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.hero h1{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;color:var(--text);line-height:1.15;letter-spacing:-.5px;margin-bottom:12px;animation:fadeIn .6s ease .35s both}
+.hero h1 .grad{background:linear-gradient(135deg,var(--teal),var(--a1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-desc{color:var(--t2);font-size:.98rem;max-width:480px;margin:0 auto 28px;font-weight:400;line-height:1.7;animation:fadeIn .6s ease .5s both}
+.hero-desc strong{color:var(--text);font-weight:600}
+.progress-wrap{max-width:360px;margin:0 auto;animation:fadeIn .6s ease .65s both}
+.progress-top{display:flex;justify-content:space-between;margin-bottom:6px}
+.progress-top span{font-size:.72rem;font-weight:600;color:var(--t3)}
+.progress-top .count{color:var(--teal)}
+.progress-track{height:5px;background:var(--cb);border-radius:5px;overflow:hidden}
+.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--a1));border-radius:5px;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+.nav{position:sticky;top:0;z-index:50;background:rgba(26,31,46,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--cb);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:52px}
+.nav-logo{font-family:'Bricolage Grotesque',sans-serif;font-size:1.15rem;font-weight:700;color:var(--text)}
+.nav-logo .lo{color:var(--teal)}
+.nav-right{display:flex;align-items:center;gap:16px}
+.nav-count{font-size:.75rem;color:var(--t3);font-weight:500}
+.nav-dl{padding:7px 18px;border-radius:8px;font-size:.78rem;font-weight:600;background:linear-gradient(135deg,var(--a1),var(--a2));color:#FFF;border:none;cursor:pointer;transition:all .3s;font-family:'DM Sans',sans-serif}
+.nav-dl:hover{opacity:.9;transform:translateY(-1px);box-shadow:0 4px 16px rgba(73,138,251,.3)}
+.container{max-width:860px;margin:0 auto;padding:0 24px 80px}
+.start-card{background:var(--card);border:1px solid var(--cb);border-radius:14px;padding:22px 26px;margin:24px 0 0;display:flex;gap:16px;align-items:flex-start;animation:fadeIn .6s ease .8s both}
+.start-card .sc-i{width:44px;height:44px;min-width:44px;border-radius:12px;background:linear-gradient(135deg,rgba(13,212,180,.12),rgba(73,138,251,.12));display:flex;align-items:center;justify-content:center;font-size:1.2rem;border:1px solid rgba(13,212,180,.15)}
+.start-card h3{font-family:'Bricolage Grotesque',sans-serif;font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:3px}
+.start-card p{font-size:.82rem;color:var(--t2);line-height:1.55}
+.start-card p strong{color:var(--teal);font-weight:600}
+.sec-head{display:flex;align-items:center;gap:12px;margin:40px 0 14px}
+.sec-head h2{font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem;font-weight:700;color:var(--text);letter-spacing:-.2px;white-space:nowrap}
+.sb{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:4px 10px;border-radius:5px;white-space:nowrap}
+.sb-c{background:rgba(13,212,180,.1);color:var(--teal);border:1px solid rgba(13,212,180,.15)}
+.sb-m{background:rgba(73,138,251,.1);color:var(--a1);border:1px solid rgba(73,138,251,.15)}
+.sb-t{background:rgba(251,191,36,.1);color:var(--amber);border:1px solid rgba(251,191,36,.15)}
+.sb-b{background:rgba(149,91,245,.1);color:var(--a2);border:1px solid rgba(149,91,245,.15)}
+.sec-line{flex:1;height:1px;background:var(--cb)}
+.products{display:flex;flex-direction:column;gap:5px}
+.prod{background:var(--card);border:1px solid var(--cb);border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:12px;transition:all .3s cubic-bezier(.4,0,.2,1)}
+.prod:hover{background:var(--card-h);border-color:rgba(73,138,251,.2);box-shadow:0 4px 20px rgba(0,0,0,.15);transform:translateY(-1px)}
+.prod.done{border-color:rgba(13,212,180,.3);background:rgba(13,212,180,.04)}
+.prod.done .dl{background:var(--teal);border-color:var(--teal);color:#FFF}
+.pn{width:32px;height:32px;min-width:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;color:#FFF;font-family:'Bricolage Grotesque',sans-serif}
+.pn-t{background:linear-gradient(135deg,#0AB89B,#0DD4B4)}
+.pn-b{background:linear-gradient(135deg,var(--a1),#6BA3FC)}
+.pn-a{background:linear-gradient(135deg,#E5A813,var(--amber))}
+.pn-p{background:linear-gradient(135deg,var(--a2),#B07DF8)}
+.pi{flex:1;min-width:0}
+.pi h4{font-size:.85rem;font-weight:600;color:var(--text);line-height:1.3;margin-bottom:1px}
+.pi span{font-size:.72rem;color:var(--t3);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pt{font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:3px 7px;border-radius:4px;white-space:nowrap;margin-right:4px}
+.pt-p{background:rgba(175,186,205,.08);color:var(--t3);border:1px solid rgba(175,186,205,.1)}
+.pt-v{background:rgba(73,138,251,.08);color:var(--a1);border:1px solid rgba(73,138,251,.1)}
+.pt-n{background:rgba(251,191,36,.08);color:var(--amber);border:1px solid rgba(251,191,36,.1)}
+.pt-r{background:rgba(251,113,133,.08);color:var(--rose);border:1px solid rgba(251,113,133,.1)}
+.dl{padding:7px 16px;border-radius:7px;font-size:.75rem;font-weight:600;border:1px solid var(--cb);color:var(--t2);background:transparent;cursor:pointer;transition:all .25s;white-space:nowrap;font-family:'DM Sans',sans-serif;display:inline-flex;align-items:center;gap:4px}
+.dl:hover{border-color:var(--a1);color:var(--a1);background:rgba(73,138,251,.06)}
+.dl:active{transform:scale(.97)}
+.dl svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.nc{background:var(--card);border:1px solid rgba(251,191,36,.15);border-radius:14px;padding:22px 26px;margin:8px 0;display:flex;align-items:flex-start;gap:16px}
+.nc .ni{font-size:1.8rem;line-height:1}
+.nc h4{font-family:'Bricolage Grotesque',sans-serif;font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:3px}
+.nc p{font-size:.78rem;color:var(--t3);line-height:1.55}
+.nl{display:inline-block;margin-top:10px;padding:8px 20px;border-radius:8px;font-size:.78rem;font-weight:600;text-decoration:none;background:linear-gradient(135deg,var(--amber),#E5A813);color:#1A1F2E;transition:all .3s}
+.nl:hover{opacity:.9;transform:translateY(-1px)}
+.db{position:fixed;bottom:0;left:0;right:0;z-index:50;background:rgba(26,31,46,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid var(--cb);padding:12px 24px;display:flex;align-items:center;justify-content:center;gap:16px;transform:translateY(100%);transition:transform .4s cubic-bezier(.4,0,.2,1)}
+.db.show{transform:translateY(0)}
+.db .dbi{font-size:.82rem;color:var(--t3)}
+.db .dbi strong{color:var(--text)}
+.dba{padding:10px 28px;border-radius:10px;font-size:.85rem;font-weight:700;background:linear-gradient(135deg,var(--a1),var(--a2));color:#FFF;border:none;cursor:pointer;transition:all .3s;font-family:'DM Sans',sans-serif;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 20px rgba(73,138,251,.25)}
+.dba:hover{transform:translateY(-1px);box-shadow:0 6px 28px rgba(73,138,251,.35)}
+.dba svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.help{background:var(--card);border:1px solid var(--cb);border-radius:14px;padding:28px 32px;margin-top:48px;text-align:center}
+.help h3{font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:6px}
+.help p{font-size:.85rem;color:var(--t3)}
+.help a{color:var(--a1);font-weight:600;text-decoration:none}
+.help a:hover{text-decoration:underline}
+/* Upsell */
+.upsell{background:linear-gradient(135deg,rgba(149,91,245,.08) 0%,rgba(73,138,251,.06) 100%);border:1.5px solid rgba(149,91,245,.35);border-radius:18px;padding:36px 32px;margin-top:44px;position:relative;overflow:hidden}
+.upsell::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(149,91,245,.12) 0%,transparent 70%);pointer-events:none}
+.upsell-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(149,91,245,.12);border:1px solid rgba(149,91,245,.3);padding:5px 16px;border-radius:50px;margin-bottom:16px}
+.upsell-badge span{font-size:.72rem;font-weight:700;color:var(--a2);letter-spacing:.5px;text-transform:uppercase}
+.upsell h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.35rem,3vw,1.75rem);font-weight:800;color:var(--text);line-height:1.2;letter-spacing:-.4px;margin-bottom:8px}
+.upsell h2 .ug{background:linear-gradient(135deg,var(--a2),var(--a1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.upsell-sub{font-size:.9rem;color:var(--t2);line-height:1.65;max-width:560px;margin-bottom:24px}
+.upsell-sub strong{color:var(--text)}
+.upsell-benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-bottom:28px}
+.ub{background:rgba(26,31,46,.6);border:1px solid rgba(149,91,245,.15);border-radius:11px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start}
+.ub-icon{width:32px;height:32px;min-width:32px;border-radius:8px;background:linear-gradient(135deg,rgba(149,91,245,.2),rgba(73,138,251,.15));display:flex;align-items:center;justify-content:center;font-size:.9rem}
+.ub h4{font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:2px;line-height:1.3}
+.ub p{font-size:.73rem;color:var(--t3);line-height:1.5}
+.upsell-cta{display:flex;flex-direction:column;align-items:center;gap:10px}
+.upsell-price{display:flex;align-items:baseline;gap:6px;margin-bottom:4px}
+.upsell-price .amt{font-family:'Bricolage Grotesque',sans-serif;font-size:2rem;font-weight:800;color:var(--text)}
+.upsell-price .per{font-size:.85rem;color:var(--t3)}
+.upsell-price .orig{font-size:.82rem;color:var(--t4);text-decoration:line-through;margin-left:4px}
+.upsell-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 36px;border-radius:12px;font-size:.95rem;font-weight:700;background:linear-gradient(135deg,var(--a2),var(--a1));color:#FFF;text-decoration:none;border:none;cursor:pointer;transition:all .3s;font-family:'DM Sans',sans-serif;box-shadow:0 6px 28px rgba(149,91,245,.3)}
+.upsell-btn:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(149,91,245,.4);opacity:.95}
+.upsell-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.upsell-note{font-size:.72rem;color:var(--t4);text-align:center}
+@media(max-width:640px){.upsell{padding:24px 20px}.upsell-benefits{grid-template-columns:1fr}.upsell-btn{width:100%;justify-content:center}}
+.footer{text-align:center;padding:28px 24px 100px;font-size:.72rem;color:var(--t4)}
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(60px);background:var(--card);border:1px solid rgba(13,212,180,.2);color:var(--text);padding:10px 22px;border-radius:10px;font-size:.82rem;font-weight:500;display:flex;align-items:center;gap:8px;box-shadow:0 8px 32px rgba(0,0,0,.4);z-index:100;transition:transform .4s cubic-bezier(.34,1.56,.64,1);pointer-events:none;opacity:0}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+.toast .tc{color:var(--teal);font-weight:700}
+.mc-card{background:var(--card);border:1px solid var(--cb);border-radius:14px;overflow:hidden;margin:8px 0}
+.mc-video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+.mc-video iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.mc-info{padding:16px 20px;display:flex;align-items:center;gap:12px;border-top:1px solid var(--cb)}
+.mc-info .pn{width:32px;height:32px;min-width:32px;border-radius:8px}
+.mc-info h4{font-size:.9rem;font-weight:600;color:var(--text);flex:1}
+.mc-info span{font-size:.72rem;color:var(--t3)}
+@media(max-width:640px){.prod{flex-wrap:wrap;gap:8px;padding:12px 14px}.pt{display:none}.start-card,.nc{flex-direction:column}.nav-count{display:none}.db{padding:10px 16px}.db .dbi{display:none}}
+</style>
+<!-- Meta Pixel — Neuropathy Secret -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '191474033675107');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=191474033675107&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel — Neuropathy Secret -->
+<!-- Meta Pixel — Brentwood -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1096463567087261');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1096463567087261&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel — Brentwood -->
+</head>
+<body>
+<header class="hero"><div class="hero-glow"></div><div class="hero-glow2"></div><div class="hero-content"><div class="success-pill"><span class="success-dot"></span><span>Payment Confirmed</span></div><h1>Welcome to Your<br><span class="grad">Calm Body Reset</span></h1><p class="hero-desc">All <strong>16 digital products</strong> are ready below. Click any download button to save it instantly.</p><div class="progress-wrap"><div class="progress-top"><span>Downloads</span><span class="count" id="pc">0 / 15</span></div><div class="progress-track"><div class="progress-fill" id="pf"></div></div></div></div></header>
+<nav class="nav"><div class="nav-logo">Calm<span class="lo">Body</span>Reset</div><div class="nav-right"><span class="nav-count" id="nc2">0 / 15 downloaded</span><button class="nav-dl" onclick="dlAll()">Download All</button></div></nav>
+<div class="container">
+<div class="start-card"><div class="sc-i">&#10024;</div><div><h3>Start here</h3><p><strong>1.</strong> Welcome Guide &rarr; <strong>2.</strong> 30-Day Program &rarr; <strong>3.</strong> Shopping Guide</p></div></div>
+<div class="sec-head"><h2>Core 30-Day Program</h2><span class="sb sb-c">11 Products</span><div class="sec-line"></div></div>
+<div class="products">
+<div class="prod"><div class="pn pn-t">01</div><div class="pi"><h4>Welcome Guide & Quick-Start Roadmap</h4><span>Everything explained in 10 minutes — start here</span></div><span class="pt pt-p">PDF</span><button class="dl" onclick="dl(this,'01-Welcome-Guide.pdf')"><svg><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</button></div>
+<div class="prod"><div class="pn pn-t">02</div><div class="pi"><h4>The 30-Day Calm Body Reset Program</h4><span>Phase 1: Detox & Calm | Phase 2: Rebuild & Burn</span></div><span class="pt pt-p">PDF</span><button class="dl" onclick="dl(this,'02-30-Day-Program.pdf')"><svg><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</button></div>
+<div class="prod"><div class="pn pn-t">03</div><div class="pi"><h4>Hormone-Friendly Shopping Guide</h4><span>Aisle-by-aisle lists for Phase 1 & Phase 2</span></div><span class="pt pt-r">Print</span><button class="dl" onclick="dl(this,'03-Shopping-Guide.pdf')"><svg><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</button></div>
+<div class="prod"><div class="pn pn-t">04</div><div class="pi"><h4>Calm Body Reset Eating Out Guide</h4><span>What to order at 20+ restaurants</span></div><span class="pt pt-p">PDF</span><button class="dl" onclick="dl(this,'04-Eating-Out-Guide.pdf')"><svg><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</button></div>
+<div class="prod"><div class="pn pn-t">05</div><div class="pi"><h4>Daily Food Diary & Reset Journal</h4><span>Track meals, water, energy, sleep, symptoms</span></div><span class="pt pt-r">Print</span><button class="dl" onclick="dl(this,'05-Daily-Food-Diary.pdf')"><svg><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</button></div>
+<div class="prod"><div class="pn pn-t">06</div><div class="pi"><h4>4-Week Body Composition Tracker</h4><span>Week 1-4 checkpoints + Start vs. Finish</span></div><span class="pt pt-r">Print</span><button class="dl" onclick="dl(this,'06-Body-Composition-Tracker.pdf')"><svg><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</button></div>
+<div class="prod"><div class="pn pn-t">07</div><div class="pi"><h4>Symptom & Histamine Reaction Tracker</h4><span>Track 34+ symptoms across 5 categories</span></div><span class="pt pt-r">Print</span><button class="dl" onclick="dl(this,'07-Symptom-Tracker.pdf')"><svg><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</button></div>
+<div class="prod"><div class="pn pn-t">08</div><div class="pi"><h4>30-Day Daily Check-In System</h4><span>2-minute daily accountability</span></div><span class="pt pt-r">Print</span><button class="dl" onclick="dl(this,'08-Daily-Check-In.pdf')"><svg><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</button></div>
+<div class="prod"><div class="pn pn-t">09</div><div class="pi"><h4>Program Science & Definition Guide</h4><span>Cortisol, histamine, gut-brain axis science</span></div><span class="pt pt-p">PDF</span><button class="dl" onclick="dl(this,'09-Program-Science-Guide.pdf')"><svg><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</button></div>
+<div class="prod"><div class="pn pn-t">10</div><div class="pi"><h4>Post-Reset Stabilization Guide</h4><span>Maintain results after day 30</span></div><span class="pt pt-p">PDF</span><button class="dl" onclick="dl(this,'10-Stabilization-Guide.pdf')"><svg><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</button></div>
+<div class="prod"><div class="pn pn-t">11</div><div class="pi"><h4>Gentle Supplement Recommendation Guide</h4><span>12 supplements rated with evidence</span></div><span class="pt pt-p">PDF</span><button class="dl" onclick="dl(this,'11-Supplement-Guide.pdf')"><svg><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</button></div>
+</div>
+<div class="sec-head"><h2>Masterclass</h2><span class="sb sb-m">1 Video Course</span><div class="sec-line"></div></div>
+<div class="mc-card">
+  <div class="mc-video">
+    <iframe src="https://www.youtube.com/embed/3dNNmdauBh8" title="Calm Body Reset Cortisol Masterclass" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <div class="mc-info">
+    <div class="pn pn-b" style="display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;color:#FFF;font-family:'Bricolage Grotesque',sans-serif;">12</div>
+    <div style="flex:1"><h4 style="font-size:.9rem;font-weight:600;color:var(--text);margin-bottom:2px">Calm Body Reset Cortisol Masterclass</h4><span style="font-size:.72rem;color:var(--t3)">Cortisol, stress &amp; hormonal weight — watch directly in your browser</span></div>
+    <span class="pt pt-v">Video</span>
+  </div>
+</div>
+<div class="sec-head"><h2>Digital Tools</h2><span class="sb sb-t">1 Template</span><div class="sec-line"></div></div>
+<div class="nc"><div class="ni">&#128466;</div><div><h4>Notion Life Dashboard — Reset Edition</h4><p>Track meals, symptoms, measurements, and journal entries in one digital workspace.</p><a href="#" class="nl">Duplicate Template &rarr;</a></div></div>
+<div class="sec-head"><h2>Exclusive Bonuses</h2><span class="sb sb-b">4 Free Gifts</span><div class="sec-line"></div></div>
+<div class="products">
+<div class="prod"><div class="pn pn-p">B1</div><div class="pi"><h4>Sleep & Cortisol Reset Protocol</h4><span>7-day evening system</span></div><span class="pt pt-p">PDF</span><button class="dl" onclick="dl(this,'14-Sleep-Cortisol-Reset.pdf')"><svg><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</button></div>
+<div class="prod"><div class="pn pn-p">B2</div><div class="pi"><h4>30-Day Affirmation & Mindset Journal</h4><span>Daily self-compassion prompts</span></div><span class="pt pt-r">Print</span><button class="dl" onclick="dl(this,'15-Affirmation-Journal.pdf')"><svg><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</button></div>
+<div class="prod"><div class="pn pn-p">B3</div><div class="pi"><h4>Partner & Family Communication Toolkit</h4><span>Shareable guide + conversation scripts</span></div><span class="pt pt-p">PDF</span><button class="dl" onclick="dl(this,'16-Partner-Communication-Toolkit.pdf')"><svg><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</button></div>
+<div class="prod"><div class="pn pn-p">B4</div><div class="pi"><h4>Grocery Swap Cheat Sheet</h4><span>One-page fridge magnet</span></div><span class="pt pt-r">Print</span><button class="dl" onclick="dl(this,'17-Grocery-Swap-Cheat-Sheet.pdf')"><svg><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</button></div>
+</div>
+<div class="upsell">
+  <div class="upsell-badge"><span>&#128081; Exclusive Offer</span></div>
+  <h2>Join the Private <span class="ug">Calm Body Reset</span><br>Facebook Community</h2>
+  <p class="upsell-sub">You have the tools — now get the <strong>daily support, accountability, and real-time answers</strong> that keep women on track until day 30 and beyond. This is where results happen <em>faster</em>.</p>
+  <div class="upsell-benefits">
+    <div class="ub"><div class="ub-icon">&#128172;</div><div><h4>Daily Live Q&amp;A with Kristi</h4><p>Get your personal hormones, cortisol, and histamine questions answered live every week.</p></div></div>
+    <div class="ub"><div class="ub-icon">&#128293;</div><div><h4>30-Day Accountability Challenges</h4><p>Members-only reset sprints with check-ins, prizes, and peer support to keep you going.</p></div></div>
+    <div class="ub"><div class="ub-icon">&#127859;</div><div><h4>Exclusive Recipes &amp; Meal Prep Tips</h4><p>New hormone-friendly recipes posted weekly — never wonder what to cook again.</p></div></div>
+    <div class="ub"><div class="ub-icon">&#127775;</div><div><h4>Real Success Stories &amp; Motivation</h4><p>See women just like you losing inches, sleeping better, and calming inflammation in real time.</p></div></div>
+    <div class="ub"><div class="ub-icon">&#128274;</div><div><h4>Members-Only Content &amp; Early Access</h4><p>First access to new guides, updates, and bonus tools before they go public.</p></div></div>
+    <div class="ub"><div class="ub-icon">&#128106;</div><div><h4>Supportive Community of Women</h4><p>A judgment-free space with women who truly understand what you're going through.</p></div></div>
+  </div>
+  <div class="upsell-cta">
+    <div class="upsell-price"><span class="amt">$37</span><span class="per">/ month</span><span class="orig">$97</span></div>
+    <a href="https://buy.stripe.com/bJe8wPenz2Uw9Z3fub2go0M" class="upsell-btn" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Yes! Join the Private Group — $37/mo
+    </a>
+    <p class="upsell-note">Cancel anytime &nbsp;·&nbsp; Secure payment via Stripe &nbsp;·&nbsp; Instant access after sign-up</p>
+  </div>
+</div>
+<div class="help"><h3>Need help?</h3><p>Email <a href="mailto:drmauldin99@gmail.com">drmauldin99@gmail.com</a> — we reply within 24 hours.</p></div>
+</div>
+<div class="footer"><p>&copy; 2026 Calm Body Reset. All rights reserved.</p></div>
+<div class="db" id="dlBar"><span class="dbi"><strong id="bc">0</strong> of 15 downloaded</span><button class="dba" onclick="dlAll()"><svg><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download All 15</button></div>
+<div class="toast" id="toast"><span class="tc">&#10003;</span> <span id="tt">Done</span></div>
+<script>
+let dld=new Set();const T=15;
+function up(){const c=dld.size;document.getElementById('pc').textContent=c+' / '+T;document.getElementById('pf').style.width=(c/T*100)+'%';document.getElementById('nc2').textContent=c+' / '+T+' downloaded';document.getElementById('bc').textContent=c}
+function toast(t){const e=document.getElementById('toast');document.getElementById('tt').textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2500)}
+function dl(b,f){const a=document.createElement('a');a.href='/weightless-offer/'+f;a.download=f;a.style.display='none';document.body.appendChild(a);a.click();document.body.removeChild(a);const c=b.closest('.prod');c.classList.add('done');b.innerHTML='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Done';dld.add(f);up();toast(c.querySelector('h4').textContent)}
+function dlAll(){const bs=document.querySelectorAll('.prod:not(.done) .dl');let d=0;bs.forEach(b=>{setTimeout(()=>b.click(),d);d+=300});setTimeout(()=>toast('All products downloaded!'),d+400)}
+window.addEventListener('scroll',()=>{document.getElementById('dlBar').classList.toggle('show',window.scrollY>400)});
+setTimeout(()=>up(),300);
+</script>
+</body>
+</html>
