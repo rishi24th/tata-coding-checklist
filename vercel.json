@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/thankyou", "destination": "/thankyou.html" },
+    { "source": "/vsl", "destination": "/vsl.html" }
+  ]
+}
