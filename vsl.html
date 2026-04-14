@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calm Body Reset — Watch This First</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#141821;--bg2:#1A1F2E;--bg3:#242C3A;--card:#1D2530;--ch:#252E3C;--cb:#2A3344;--cb2:#343E52;
+  --text:#E8ECF2;--t2:#AFBACD;--t3:#7A8699;--t4:#4E5A6E;
+  --a1:#498AFB;--a2:#955BF5;--grad:linear-gradient(135deg,#498AFB,#955BF5);
+  --teal:#0DD4B4;--td:#0AB89B;--tl:rgba(13,212,180,.12);
+  --em:#34D399;--amber:#FBBF24;--rose:#FB7185;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--t2);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 32px;height:56px;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(20,24,33,.85);border-bottom:1px solid var(--cb)}
+.nav-logo{font-family:'Bricolage Grotesque',sans-serif;font-size:1.2rem;font-weight:700;color:var(--text)}
+.nav-logo .lo{color:var(--teal)}
+.nav-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(13,212,180,.08);border:1px solid rgba(13,212,180,.2);padding:5px 16px;border-radius:50px;font-size:.72rem;font-weight:600;color:var(--teal);letter-spacing:.4px}
+.nav-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 8px rgba(13,212,180,.6);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 8px rgba(13,212,180,.5)}50%{box-shadow:0 0 18px rgba(13,212,180,.25)}}
+
+/* HERO */
+.hero{padding:100px 24px 32px;text-align:center;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 40%,rgba(73,138,251,.07) 0%,transparent 55%),radial-gradient(ellipse at 70% 60%,rgba(149,91,245,.06) 0%,transparent 55%);pointer-events:none}
+.hero-inner{position:relative;z-index:2;max-width:760px;margin:0 auto}
+.pre-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(13,212,180,.08);border:1px solid rgba(13,212,180,.2);padding:6px 18px;border-radius:50px;margin-bottom:20px;animation:fadeUp .6s ease .1s both}
+.pre-tag span{font-size:.72rem;font-weight:700;color:var(--teal);letter-spacing:.6px;text-transform:uppercase}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.hero h1{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;color:var(--text);line-height:1.15;letter-spacing:-.5px;margin-bottom:14px;animation:fadeUp .6s ease .25s both}
+.hero h1 .grad{background:linear-gradient(135deg,var(--teal),var(--a1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:1rem;color:var(--t2);max-width:560px;margin:0 auto 10px;line-height:1.7;animation:fadeUp .6s ease .4s both}
+.hero-sub strong{color:var(--text)}
+.hero-hint{font-size:.78rem;color:var(--t3);margin-bottom:28px;animation:fadeUp .6s ease .5s both}
+
+/* VIDEO */
+.video-wrap{max-width:800px;margin:0 auto;padding:0 24px 16px;animation:fadeUp .6s ease .55s both}
+.video-card{background:var(--card);border:1.5px solid var(--cb);border-radius:18px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.5)}
+.video-card:hover{border-color:rgba(13,212,180,.25);box-shadow:0 24px 80px rgba(0,0,0,.6),0 0 0 1px rgba(13,212,180,.08)}
+.video-ratio{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+.video-ratio iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.video-footer{padding:14px 20px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--cb);flex-wrap:wrap;gap:8px}
+.vf-left{display:flex;align-items:center;gap:10px}
+.vf-dot{width:8px;height:8px;border-radius:50%;background:var(--rose);box-shadow:0 0 8px rgba(251,113,133,.5)}
+.vf-label{font-size:.75rem;font-weight:600;color:var(--t3)}
+.vf-label strong{color:var(--text)}
+.vf-right{font-size:.72rem;color:var(--t4)}
+
+/* LOCK BAR — shown below video before unlock */
+.lock-bar{max-width:800px;margin:0 auto 16px;padding:0 24px}
+.lock-inner{background:var(--card);border:1px solid rgba(251,191,36,.15);border-radius:14px;padding:16px 22px;display:flex;align-items:center;gap:14px;transition:all .5s}
+.lock-icon{width:40px;height:40px;min-width:40px;border-radius:10px;background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:all .5s}
+.lock-text h4{font-family:'Bricolage Grotesque',sans-serif;font-size:.88rem;font-weight:700;color:var(--t3);margin-bottom:2px;transition:color .5s}
+.lock-text p{font-size:.75rem;color:var(--t4);transition:color .5s}
+.lock-progress{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.lock-track{width:120px;height:4px;background:var(--cb);border-radius:4px;overflow:hidden}
+.lock-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--amber),#E5A813);border-radius:4px;transition:width .5s linear}
+.lock-pct{font-size:.65rem;color:var(--t4);font-weight:600}
+
+/* TRUST STRIP */
+.trust{max-width:800px;margin:0 auto 60px;padding:0 24px}
+.trust-inner{display:flex;justify-content:center;gap:28px;flex-wrap:wrap}
+.ti{display:flex;align-items:center;gap:7px;font-size:.75rem;color:var(--t3)}
+.ti svg{width:14px;height:14px;stroke:var(--teal);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* FOOTER */
+.footer{text-align:center;padding:28px 24px 40px;font-size:.72rem;color:var(--t4);border-top:1px solid var(--cb)}
+
+/* ====== UNLOCK MODAL ====== */
+.modal-overlay{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .4s ease}
+.modal-overlay.show{opacity:1;pointer-events:all}
+.modal-backdrop{position:absolute;inset:0;background:rgba(10,13,20,.8);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.modal{position:relative;z-index:2;background:var(--bg2);border:1.5px solid rgba(13,212,180,.3);border-radius:22px;padding:40px 36px;max-width:460px;width:100%;text-align:center;box-shadow:0 32px 100px rgba(0,0,0,.6),0 0 0 1px rgba(13,212,180,.06);transform:scale(.9) translateY(20px);transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.modal-overlay.show .modal{transform:scale(1) translateY(0)}
+.modal-icon-wrap{position:relative;width:72px;height:72px;margin:0 auto 20px;display:flex;align-items:center;justify-content:center}
+.modal-icon-bg{position:absolute;inset:0;border-radius:50%;background:linear-gradient(135deg,rgba(13,212,180,.15),rgba(73,138,251,.1));border:1.5px solid rgba(13,212,180,.25);animation:iconPulse 2s ease infinite}
+@keyframes iconPulse{0%,100%{box-shadow:0 0 0 0 rgba(13,212,180,.15)}50%{box-shadow:0 0 0 12px rgba(13,212,180,.0)}}
+.modal-icon{font-size:2rem;position:relative;z-index:1;animation:unlockBounce .6s cubic-bezier(.34,1.56,.64,1) .2s both}
+@keyframes unlockBounce{from{transform:scale(0) rotate(-20deg)}to{transform:scale(1) rotate(0deg)}}
+.modal-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(13,212,180,.1);border:1px solid rgba(13,212,180,.25);padding:5px 16px;border-radius:50px;margin-bottom:14px;animation:fadeUp .4s ease .3s both}
+.modal-badge span{font-size:.68rem;font-weight:700;color:var(--teal);letter-spacing:.8px;text-transform:uppercase}
+.modal h2{font-family:'Bricolage Grotesque',sans-serif;font-size:1.5rem;font-weight:800;color:var(--text);line-height:1.2;letter-spacing:-.3px;margin-bottom:10px;animation:fadeUp .4s ease .4s both}
+.modal h2 .mg{background:linear-gradient(135deg,var(--teal),var(--a1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.modal-desc{font-size:.88rem;color:var(--t2);line-height:1.65;margin-bottom:24px;animation:fadeUp .4s ease .5s both}
+.modal-desc strong{color:var(--text)}
+.modal-price{display:flex;align-items:baseline;justify-content:center;gap:8px;margin-bottom:24px;animation:fadeUp .4s ease .55s both}
+.modal-price .now{font-family:'Bricolage Grotesque',sans-serif;font-size:2.2rem;font-weight:800;color:var(--text)}
+.modal-price .was{font-size:.9rem;color:var(--t4);text-decoration:line-through}
+.modal-price .save{font-size:.75rem;font-weight:700;color:var(--em);background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.2);padding:3px 10px;border-radius:20px}
+.modal-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px 32px;border-radius:13px;font-size:1rem;font-weight:700;background:linear-gradient(135deg,var(--teal),var(--a1));color:#0F172A;text-decoration:none;border:none;cursor:pointer;transition:all .3s;font-family:'DM Sans',sans-serif;box-shadow:0 6px 28px rgba(13,212,180,.3);animation:fadeUp .4s ease .65s both;letter-spacing:-.1px}
+.modal-btn:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(13,212,180,.4)}
+.modal-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.modal-note{font-size:.7rem;color:var(--t4);margin-top:12px;animation:fadeUp .4s ease .7s both}
+.modal-close{position:absolute;top:14px;right:16px;width:28px;height:28px;border-radius:7px;background:var(--cb);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--t3);font-size:.9rem;transition:all .25s;font-family:inherit}
+.modal-close:hover{background:var(--cb2);color:var(--text)}
+
+/* confetti dots */
+.confetti{position:absolute;width:6px;height:6px;border-radius:50%;opacity:0;pointer-events:none}
+
+@media(max-width:640px){
+  .nav{padding:0 16px}
+  .hero{padding:80px 0 24px}
+  .modal{padding:28px 22px}
+  .modal h2{font-size:1.25rem}
+  .trust-inner{gap:16px}
+  .lock-progress{display:none}
+  .vf-right{display:none}
+}
+</style>
+<!-- Meta Pixel — Neuropathy Secret -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '191474033675107');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=191474033675107&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel — Neuropathy Secret -->
+<!-- Meta Pixel — Brentwood -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1096463567087261');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1096463567087261&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel — Brentwood -->
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">Calm<span class="lo">Body</span>Reset</div>
+  <div class="nav-pill"><span class="nav-dot"></span><span>Watch Now</span></div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="pre-tag"><span>&#127909; Free Masterclass</span></div>
+    <h1>The <span class="grad">Hidden Hormone Trigger</span><br>Keeping You Stuck</h1>
+    <p class="hero-sub">Watch this short video to discover why <strong>cortisol — not calories</strong> is the real reason your body holds onto weight, and what to do about it starting today.</p>
+    <p class="hero-hint">&#9200; Watch at least 10 minutes to unlock an exclusive offer</p>
+  </div>
+</section>
+
+<div class="video-wrap">
+  <div class="video-card">
+    <div class="video-ratio">
+      <div id="yt-player"></div>
+    </div>
+    <div class="video-footer">
+      <div class="vf-left">
+        <span class="vf-dot"></span>
+        <span class="vf-label"><strong>Calm Body Reset</strong> — Free Training</span>
+      </div>
+      <span class="vf-right">Keep watching to unlock your exclusive offer</span>
+    </div>
+  </div>
+</div>
+
+<div class="lock-bar">
+  <div class="lock-inner" id="lockBar">
+    <div class="lock-icon" id="lockIcon">&#128274;</div>
+    <div class="lock-text">
+      <h4 id="lockTitle">Exclusive Offer Locked</h4>
+      <p id="lockSub">Keep watching — unlocks at the 10-minute mark</p>
+    </div>
+    <div class="lock-progress">
+      <div class="lock-track"><div class="lock-fill" id="lockFill"></div></div>
+      <span class="lock-pct" id="lockPct">0% watched</span>
+    </div>
+  </div>
+</div>
+
+<div class="trust">
+  <div class="trust-inner">
+    <div class="ti"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>No sign-up required</div>
+    <div class="ti"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>100% free training</div>
+    <div class="ti"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Backed by science</div>
+    <div class="ti"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Works for women 35+</div>
+  </div>
+</div>
+
+<footer class="footer">&copy; 2026 Calm Body Reset. All rights reserved. For informational purposes only — not medical advice.</footer>
+
+<!-- UNLOCK MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose" aria-label="Close">&#10005;</button>
+    <div class="modal-icon-wrap">
+      <div class="modal-icon-bg"></div>
+      <div class="modal-icon">&#128275;</div>
+    </div>
+    <div class="modal-badge"><span>&#127881; Offer Unlocked</span></div>
+    <h2>You've Earned the<br><span class="mg">Complete Reset System</span></h2>
+    <p class="modal-desc">Because you watched this far, you're clearly serious about your health. Get the full <strong>Calm Body Reset</strong> — 16 digital products, the Cortisol Masterclass, and lifetime access.</p>
+    <div class="modal-price">
+      <span class="now">$99</span>
+      <span class="was">$1,290</span>
+      <span class="save">Save 93%</span>
+    </div>
+    <a href="https://calmbodyreset.com" class="modal-btn">
+      <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      Claim My Complete System &rarr;
+    </a>
+    <p class="modal-note">Instant access &nbsp;·&nbsp; 30-day guarantee &nbsp;·&nbsp; Lifetime ownership</p>
+  </div>
+</div>
+
+<!-- YouTube IFrame API -->
+<script>
+const UNLOCK_TIME = 600; // 10 minutes in seconds
+const UNLOCK_WINDOW = 600; // treat entire video after 10min as the window
+let player, unlocked = false, polling;
+
+// Load YouTube IFrame API
+const tag = document.createElement('script');
+tag.src = 'https://www.youtube.com/iframe_api';
+document.head.appendChild(tag);
+
+window.onYouTubeIframeAPIReady = function() {
+  player = new YT.Player('yt-player', {
+    videoId: 'BB1emn062ac',
+    playerVars: {
+      rel: 0,
+      modestbranding: 1,
+      color: 'white',
+      iv_load_policy: 3,
+      playsinline: 1
+    },
+    events: {
+      onReady: onPlayerReady,
+      onStateChange: onPlayerStateChange
+    }
+  });
+};
+
+function onPlayerReady(e) {
+  // start polling once player is ready
+  polling = setInterval(checkTime, 1000);
+}
+
+function onPlayerStateChange(e) {
+  // YT.PlayerState.PLAYING = 1
+  if (e.data === 1) {
+    if (!polling) polling = setInterval(checkTime, 1000);
+  }
+}
+
+function checkTime() {
+  if (!player || typeof player.getCurrentTime !== 'function') return;
+  const current = player.getCurrentTime();
+  const duration = player.getDuration() || 1;
+
+  // Update progress bar (0–100% up to UNLOCK_TIME)
+  const pct = Math.min(current / UNLOCK_TIME * 100, 100);
+  document.getElementById('lockFill').style.width = pct + '%';
+  document.getElementById('lockPct').textContent = Math.round(pct) + '% watched';
+
+  if (current >= UNLOCK_TIME && !unlocked) {
+    unlocked = true;
+    clearInterval(polling);
+    triggerUnlock();
+  }
+}
+
+function triggerUnlock() {
+  // Update lock bar
+  const bar = document.getElementById('lockBar');
+  const icon = document.getElementById('lockIcon');
+  const title = document.getElementById('lockTitle');
+  const sub = document.getElementById('lockSub');
+  const fill = document.getElementById('lockFill');
+
+  bar.style.borderColor = 'rgba(13,212,180,.35)';
+  bar.style.background = 'rgba(13,212,180,.04)';
+  icon.textContent = '🔓';
+  icon.style.background = 'rgba(13,212,180,.12)';
+  icon.style.borderColor = 'rgba(13,212,180,.3)';
+  title.style.color = '#0DD4B4';
+  title.textContent = 'Offer Unlocked!';
+  sub.textContent = 'Your exclusive offer is ready';
+  fill.style.width = '100%';
+  document.getElementById('lockPct').textContent = '✓ Unlocked';
+
+  // Launch confetti then show modal
+  spawnConfetti();
+  setTimeout(showModal, 600);
+}
+
+function showModal() {
+  document.getElementById('modalOverlay').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function hideModal() {
+  document.getElementById('modalOverlay').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('modalClose').addEventListener('click', hideModal);
+document.getElementById('modalBackdrop').addEventListener('click', hideModal);
+
+// Simple confetti burst
+function spawnConfetti() {
+  const colors = ['#0DD4B4','#498AFB','#955BF5','#FBBF24','#34D399','#FB7185'];
+  const container = document.getElementById('modal') || document.body;
+  for (let i = 0; i < 28; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'confetti';
+    dot.style.cssText = `
+      background:${colors[i % colors.length]};
+      left:${Math.random()*100}%;
+      top:${Math.random()*60}%;
+      animation: cf${i} 1.2s ease-out forwards;
+    `;
+    const tx = (Math.random()-0.5)*180;
+    const ty = (Math.random()-1.2)*160;
+    const style = document.createElement('style');
+    style.textContent = `@keyframes cf${i}{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(${tx}px,${ty}px) scale(0)}}`;
+    document.head.appendChild(style);
+    document.getElementById('modalOverlay').appendChild(dot);
+    setTimeout(() => dot.remove(), 1400);
+  }
+}
+</script>
+
+</body>
+</html>
